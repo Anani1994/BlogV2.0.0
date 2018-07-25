@@ -5,24 +5,18 @@ const webpackMerge = require('webpack-merge');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = webpackMerge(webpackBaseConfig,{
-  mode: 'development',
+  mode: 'production',
   output: {
-      publicPath: '/',
-      filename: '[hash].js',
-      chunkFilename: '[hash].chunk.js'
+      publicPath: 'https://anani1994.github.io', // https://...这部分为你的服务器域名
+      filename: 'blog/js/[hash].js',
+      chunkFilename: 'blog/js/[hash]-chunk.js'
   },
-  devServer: {
-       contentBase: path.join(__dirname, "dist"),
-       port:8081,
-       host:'127.0.0.1'
-  },
-  devtool: 'cheap-module-eval-source-map', // devtool由webpack直接提高，将打包后的文件中的错误映射到最初对应的文件中，便于调试
   plugins: [
     new HTMLWebpackPlugin({ //创建 .html 并自动引入打包后的文件
       filename: 'index.html',
-      template: 'index.html',
+      template: 'index-ori.html',
       inject: true, // 参照最初创建的 .html 来生成 .html
-      favicon: path.resolve('favicon.ico')
+      favicon: path.resolve('favicon-ori.ico')
     })
-  ],
+  ]
 });

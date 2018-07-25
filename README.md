@@ -1,18 +1,18 @@
-# Quick-vue
+# Blog
 
-<code>node v8.9.1</code> &nbsp; <code>yarn v1.7.0</code> &nbsp; <code>OS macOS</code>
+<code>node v8.9.1</code> &nbsp; <code>yarn v1.7.0</code>
 
 #### Build Setup
 
 ``` bash
 # install dependencies
-yarn install
+$ yarn install
 
 # serve with hot reload at 0.0.0.0:8081
-yarn run dev
+$ yarn run dev
 
 # build electron application for production
-yarn run build
+$ yarn run build
 
 ```
 
