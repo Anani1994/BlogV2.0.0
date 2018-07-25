@@ -2,6 +2,11 @@
 const path = require('path'); // node.js 中的基本包，用于处理路径
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const cleanWebpackPlugin = require('clean-webpack-plugin'); // 用于清除目录内容
+const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 分离css
+
+const resolve = dir => {
+  return path.join(__dirname,dir);
+};
 
 module.exports = {
   entry: path.join(__dirname,'../src/main.js'), // path.jion()将两个参数代表的路径相加组合起来，__dirname代表当前文件所在目录
@@ -29,6 +34,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
+          // {
+          //   loader: MiniCssExtractPlugin.loader,
+          //   options: {
+          //     // you can specify a publicPath here
+          //     // by default it use publicPath in webpackOptions.output
+          //     publicPath: '../'
+          //   }
+          // },
           'style-loader', // 为 css 创建 style 标签并置入其中插入页面
           'css-loader', // 处理 css
           'postcss-loader', // 浏览器兼容问题
@@ -37,7 +50,15 @@ module.exports = {
       {
         test: /\.less/,
         use: [
-          'style-loader',
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              // you can specify a publicPath here
+              // by default it use publicPath in webpackOptions.output
+              // publicPath: '../'
+            }
+          },
+          // 'style-loader',
           'css-loader',
           'postcss-loader',
           'less-loader' // loader 由下往上依次开始处理
@@ -62,16 +83,28 @@ module.exports = {
             loader: 'url-loader',
             options: { // 配置参数
               limit: 1024, // 比较标准，小于标准的图片转换为 base64 代码
-              name:'blog/images/[name]-[hash].[ext]'
+              name:'blog/images/[name].[hash].[ext]'
             }
           }
         ]
       }
     ]
   },
+  // 创建路径别名
+  resolve: {
+    alias: {
+      '@': resolve('../src'),
+    }
+  },
   plugins: [
     // Vue-loader在15.*之后的版本都是 vue-loader的使用都是需要伴生 VueLoaderPlugin
     new VueLoaderPlugin(),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "blog/css/[name].[hash].css",
+      chunkFilename: "[id].[hash].css"
+    }),
     // 打包之前使用这个插件尝试清除dist目录下的文件
     new cleanWebpackPlugin(['blog/*','index.html'], {
       root: path.resolve(__dirname, '../')

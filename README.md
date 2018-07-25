@@ -8,7 +8,7 @@
 # install dependencies
 $ yarn install
 
-# serve with hot reload at 0.0.0.0:8081
+# serve with hot reload at 192.168.1.6:8081
 $ yarn run dev
 
 # build electron application for production

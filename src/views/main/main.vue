@@ -1,6 +1,15 @@
+<style lang="less">
+    @import '../../styles/main.less';
+</style>
+
 <template>
-    <Button type="primary" @click="info">Display info prompt</Button>
+    <div class="main">
+    	<div class="content">
+    		<Button type="primary" @click="info">Display info prompt</Button>
+    	</div>
+    </div>
 </template>
+
 <script>
     export default {
         methods: {
@@ -10,3 +19,13 @@
         }
     }
 </script>
+
+<style lang="less">
+	.main {
+		.content {
+			margin: 0 auto;
+			width: 80%;
+			border: 1px solid green;
+		}
+	}
+</style>

@@ -8,8 +8,8 @@ module.exports = webpackMerge(webpackBaseConfig,{
   mode: 'development',
   output: {
       // publicPath: '/',
-      filename: 'blog/js/[hash].js',
-      chunkFilename: 'blog/js/[hash]-chunk.js'
+      filename: 'blog/js/[name].[hash].js',
+      chunkFilename: 'blog/js/chunk.[hash].js'
   },
   devServer: {
        contentBase: path.join(__dirname, "blog"),
@@ -22,7 +22,7 @@ module.exports = webpackMerge(webpackBaseConfig,{
       filename: 'index.html',
       template: 'index-ori.html',
       inject: true, // 参照最初创建的 .html 来生成 .html
-      favicon: path.resolve('favicon-ori.ico')
+      favicon: path.resolve('favicon.ico')
     })
   ],
 });

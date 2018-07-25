@@ -1,5 +1,5 @@
 <template>
-    <div class="main">
+    <div class="app">
         <router-view></router-view>
     </div>
 </template>
@@ -15,13 +15,9 @@ export default {
 
 <style lang=less>
 html,body {
-    * {
-        margin: 0;
-        padding: 0;
-    }
     width: 100%;
     height: 100%;
-    .main {
+    .app {
         width: 100%;
         height: 100%;
     }
