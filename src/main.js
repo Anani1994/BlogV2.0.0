@@ -4,8 +4,10 @@ import App from './app.vue';
 import { router } from './router/index';
 import store from './store/store';
 import 'iview/dist/styles/iview.css';
+import highLight from './highlight/highlight.js';
 
 Vue.use(iView);
+Vue.use(highLight);
 
 new Vue({ // 创建 vue 实例
   // 提供一个在页面上已经存在的 DOM 元素作为 Vue 实例挂载目标

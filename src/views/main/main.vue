@@ -7,6 +7,15 @@
     	<div class="content">
     		<Button type="primary" @click="info">Display info prompt</Button>
     	</div>
+        <div>
+            <pre v-highlight>
+                <code class="html">
+&lt;script type="text/javascript"&gt;
+    document.write(document.URL)
+&lt;/script&gt;
+                </code>
+            </pre>
+        </div>
     </div>
 </template>
 
