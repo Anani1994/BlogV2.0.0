@@ -2,7 +2,7 @@
 const path = require('path'); // node.js 中的基本包，用于处理路径
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const cleanWebpackPlugin = require('clean-webpack-plugin'); // 用于清除目录内容
-const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 分离css
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 分离css
 
 const resolve = dir => {
   return path.join(__dirname,dir);
@@ -47,23 +47,23 @@ module.exports = {
           'postcss-loader', // 浏览器兼容问题
         ]
       },
-      {
-        test: /\.less/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              // you can specify a publicPath here
-              // by default it use publicPath in webpackOptions.output
-              // publicPath: '../'
-            }
-          },
-          // 'style-loader',
-          'css-loader',
-          'postcss-loader',
-          'less-loader' // loader 由下往上依次开始处理
-        ]
-      },
+      // {
+      //   test: /\.less/,
+      //   use: [
+      //     {
+      //       loader: MiniCssExtractPlugin.loader,
+      //       options: {
+      //         // you can specify a publicPath here
+      //         // by default it use publicPath in webpackOptions.output
+      //         publicPath: '../../'
+      //       }
+      //     },
+      //     // 'style-loader',
+      //     'css-loader',
+      //     'postcss-loader',
+      //     'less-loader' // loader 由下往上依次开始处理
+      //   ]
+      // },
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -99,12 +99,12 @@ module.exports = {
   plugins: [
     // Vue-loader在15.*之后的版本都是 vue-loader的使用都是需要伴生 VueLoaderPlugin
     new VueLoaderPlugin(),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "blog/css/[name].[hash].css",
-      chunkFilename: "[id].[hash].css"
-    }),
+    // new MiniCssExtractPlugin({
+    //   // Options similar to the same options in webpackOptions.output
+    //   // both options are optional
+    //   filename: "blog/css/[name].[hash].css",
+    //   chunkFilename: "[id].[hash].css"
+    // }),
     // 打包之前使用这个插件尝试清除dist目录下的文件
     new cleanWebpackPlugin(['blog/*','index.html'], {
       root: path.resolve(__dirname, '../')

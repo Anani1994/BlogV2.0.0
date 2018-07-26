@@ -11,6 +11,19 @@ module.exports = webpackMerge(webpackBaseConfig,{
       filename: 'blog/js/[name].[hash].js',
       chunkFilename: 'blog/js/chunk.[hash].js'
   },
+  module: {
+    rules: [
+      {
+        test: /\.less/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'less-loader' // loader 由下往上依次开始处理
+        ]
+      },
+    ],
+  },
   devServer: {
        contentBase: path.join(__dirname, "blog"),
        port:8081,

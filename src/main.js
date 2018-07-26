@@ -1,10 +1,17 @@
 import Vue from 'vue';
-import iView from 'iview';
+
 import App from './app.vue';
+
 import { router } from './router/index';
+
 import store from './store/store';
+
+import iView from 'iview';
 import 'iview/dist/styles/iview.css';
+
 import highLight from './highlight/highlight.js';
+
+import './styles/main.less';
 
 Vue.use(iView);
 Vue.use(highLight);
