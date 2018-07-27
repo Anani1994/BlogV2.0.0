@@ -83,7 +83,7 @@ module.exports = {
             loader: 'url-loader',
             options: { // 配置参数
               limit: 1024, // 比较标准，小于标准的图片转换为 base64 代码
-              name:'anani1994.github.io/images/[name].[hash].[ext]'
+              name:'blog/images/[name].[hash].[ext]'
             }
           }
         ]
@@ -102,11 +102,11 @@ module.exports = {
     // new MiniCssExtractPlugin({
     //   // Options similar to the same options in webpackOptions.output
     //   // both options are optional
-    //   filename: "anani1994.github.io/css/[name].[hash].css",
+    //   filename: "blog/css/[name].[hash].css",
     //   chunkFilename: "[id].[hash].css"
     // }),
     // 打包之前使用这个插件尝试清除dist目录下的文件
-    new cleanWebpackPlugin(['anani1994.github.io/*','blog/*','index.html'], {
+    new cleanWebpackPlugin(['blog/*','index.html'], {
       root: path.resolve(__dirname, '../')
     })
   ]
