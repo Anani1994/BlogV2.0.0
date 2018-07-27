@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin"); // 分离css
 module.exports = webpackMerge(webpackBaseConfig,{
   mode: 'production',
   output: {
-      publicPath: 'anani1994.github.io', // https://...这部分为你的服务器域名
+      publicPath: 'anani1994.github.io/', // https://...这部分为你的服务器域名
       filename: 'blog/js/[name].[hash].js',
       chunkFilename: 'blog/js/chunk.[hash].js'
   },
