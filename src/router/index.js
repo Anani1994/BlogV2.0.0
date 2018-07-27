@@ -7,8 +7,8 @@ Vue.use(VueRouter);
 
 // 路由配置
 const routerConfig = {
-    // mode: history,
-    routes: routers
+  // mode: history,
+  routes: routers
 };
 
 // 创建 router 实例，然后传 `routes` 配置
