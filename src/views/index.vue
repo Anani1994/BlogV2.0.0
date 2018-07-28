@@ -28,7 +28,7 @@
 </template>
 
 <script>
-  import {linkBall} from '../libs/linkBall.js';
+  import linkBall from '../libs/linkBall.js';
   export default {
     data() {
       return {
@@ -65,6 +65,7 @@
     top: 0;
     left: 0;
     padding: 4px;
+    color: #898785;
   }
   .link-ball a:hover {
     transform: scale(1.5);

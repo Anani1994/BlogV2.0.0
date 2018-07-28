@@ -1,4 +1,6 @@
-export const linkBall = { };
+let linkBall = {
+
+};
 
 linkBall.setLinkBall = (parmas ={}) => {
   let coordinateArr = [];
@@ -57,7 +59,7 @@ linkBall.randomCoordinate = (ball,linkes,radius,focalLength,coordinateArr) => {
     let newObj = linkBall.creatObj(linkes[i-1],x,y,z);
     coordinateArr.push(newObj);
     // 生成随机颜色
-    linkes[i-1].style.color = '#' + Math.floor(Math.random() * 0xffffff).toString(16);
+    // linkes[i-1].style.color = '#' + Math.floor(Math.random() * 0xffffff).toString(16);
     // 设置坐标
     linkes[i-1].style.left = x + ball.offsetWidth / 2 - linkes[i-1].offsetWidth/2 + "px";
     linkes[i-1].style.top = y + ball.offsetHeight / 2 - linkes[i-1].offsetHeight/2 + "px";
@@ -141,3 +143,5 @@ linkBall.rotateY = (angleY,arr) => {
     currVal.z = newZ;
   });
 };
+
+export default linkBall;

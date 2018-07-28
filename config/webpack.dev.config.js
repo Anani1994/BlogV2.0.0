@@ -9,7 +9,7 @@ module.exports = webpackMerge(webpackBaseConfig,{
   output: {
       // publicPath: '/',
       filename: 'blog/js/[name].[hash].js',
-      chunkFilename: 'blog/js/chunk.[hash].js'
+      chunkFilename: 'blog/js/[name].[hash].js'
   },
   module: {
     rules: [

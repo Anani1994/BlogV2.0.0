@@ -66,12 +66,14 @@ module.exports = {
       // },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|bower_components)/,
         use: [
           {
             loader: 'babel-loader',
             options: {
-              presets: ['env']
+              presets: ['env'],
+              // 前者防止在每个文件都插入辅助代码 后者支持路由懒加载
+              plugins: ['transform-runtime','syntax-dynamic-import']
             }
           }
         ]
