@@ -9,8 +9,8 @@ module.exports = webpackMerge(webpackBaseConfig,{
   mode: 'production',
   output: {
       publicPath: 'anani1994.github.io/', // https://...这部分为你的服务器域名
-      filename: 'blog/js/[name].[hash].js',
-      chunkFilename: 'blog/js/chunk.[hash].js'
+      filename: 'blog/js/file-[name].js',
+      chunkFilename: 'blog/js/chunk-[name].js'
   },
   module: {
     rules: [
@@ -43,8 +43,8 @@ module.exports = webpackMerge(webpackBaseConfig,{
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "blog/css/[name].[hash].css",
-      chunkFilename: "[id].[hash].css"
+      filename: "blog/css/file-[name].css",
+      chunkFilename: "blog/css/chunk-[id].css"
     })
   ]
 });
