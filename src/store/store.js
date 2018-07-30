@@ -6,13 +6,15 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    //
+    activeName: 'main'
   },
   getters: {
     //
   },
   mutations: {
-    //
+    setActiveName(state,name) {
+      state.activeName = name;
+    }
   },
   actions: {
     //

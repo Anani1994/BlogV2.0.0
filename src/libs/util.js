@@ -10,4 +10,12 @@ util.title = function (title, vm) {
   window.document.title = newTitle;
 };
 
+util.toPage = function (nameStr,dataObj) {
+  let obj = {
+    name: nameStr,
+    params: dataObj,
+  };
+  this.$router.push(obj);
+}
+
 export default util;

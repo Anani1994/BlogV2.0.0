@@ -83,6 +83,9 @@
             articles() {
                 return this.$store.state.articles.articlesList;
             }
+        },
+        mounted() {
+            this.$store.commit('setActiveName','articles');
         }
     }
 </script>

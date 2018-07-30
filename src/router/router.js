@@ -5,7 +5,7 @@ export const indexPage = {
 }
 
 export const frontendPage = {
-  path: '/articles/:field',
+  path: '/articles/field',
   name: 'field',
   meta: {
     title: '博文分类',
