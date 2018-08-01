@@ -1,13 +1,10 @@
 
 .page-container {
   overflow: hidden;
-  height: 200px;
 }
 .page-container > .container {
   position: relative;
   top: 0;
-}
-.page-container > .container > .page {
-  height: 200px;
+  transition: top 1000ms ease;
 }
 

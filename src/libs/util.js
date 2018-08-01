@@ -18,4 +18,26 @@ util.toPage = function (nameStr,dataObj) {
   this.$router.push(obj);
 }
 
+// 节流函数，method 回调函数，context 上下文，delay 延迟
+util.throttle = function (method, context, delay) {
+  let wait = false;
+  return function() {
+    if (!wait) {
+      method.apply(context, arguments);
+      wait = true;
+      setTimeout(() => {
+        wait = false;
+      }, delay);
+    }
+  }
+};
+
+// 防抖动函数，method 回调函数，context 上下文，event 传入的时间，delay 延迟
+util.debounce = function (method, context, event, delay) {
+  clearTimeout(method.tId);
+  method.tId = setTimeout(() => {
+    method.call(context, event);
+  }, delay);
+}
+
 export default util;

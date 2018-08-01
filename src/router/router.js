@@ -15,6 +15,16 @@ export const fieldPage = {
   component: () => import('@/views/articles/field.vue'),
 };
 
+// 用于测试
+export const testRouter = {
+  path: '/components/fullpage',
+  name: 'compo',
+  meta: {
+    title: '通用组件测试'
+  },
+  component: () => import('@/components/fullpage.vue')
+}
+
 let articlesPage = [];
 articlesInfo.forEach((cur) => {
   let pathObj = {
@@ -31,5 +41,6 @@ articlesInfo.forEach((cur) => {
 export const routers = [
   indexPage,
   fieldPage,
+  testRouter,
   ...articlesPage
 ];

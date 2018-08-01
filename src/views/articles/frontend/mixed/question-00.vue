@@ -1,12 +1,10 @@
 <template>
-  <div>我是用于测试的1</div>
+  <router-link to="/components/fullpage">fullpage</router-link>
 </template>
 
 <script>
 export default {
-  created() {
-    console.log(99)
-  }
+  
 }
 </script>
 
