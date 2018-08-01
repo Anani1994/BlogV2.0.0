@@ -76,6 +76,7 @@ html,body {
   position: relative;
   width: 100%;
   height: 100%;
+  color: #fff;
   background-image: url('./assets/images/app-bg-img.jpeg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -90,7 +91,6 @@ html,body {
     height: 30px;
     line-height: 30px;
     text-align: center;
-    color: #fff;
   }
   .border-right {
     margin: 0 1rem;

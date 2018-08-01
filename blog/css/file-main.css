@@ -8,6 +8,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
+  color: #fff;
   background-image: url(../../blog/images/app-bg-img.be4e7db083b19f426e8f8ea03833188c.jpeg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -23,7 +24,6 @@ body {
   height: 30px;
   line-height: 30px;
   text-align: center;
-  color: #fff;
 }
 .app-container .border-right {
   margin: 0 1rem;
