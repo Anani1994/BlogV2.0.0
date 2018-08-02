@@ -108,7 +108,7 @@ module.exports = {
     //   chunkFilename: "[id].[hash].css"
     // }),
     // 打包之前使用这个插件尝试清除dist目录下的文件
-    new cleanWebpackPlugin(['blog/*','index.html'], {
+    new cleanWebpackPlugin(['blog/css/*','blog/js/*','blog/images/*','index.html'], {
       root: path.resolve(__dirname, '../')
     })
   ]

@@ -1,10 +1,13 @@
 <template>
-  <router-link to="/components/fullpage">fullpage</router-link>
+  <FullPage></FullPage>
 </template>
 
 <script>
+import FullPage from '../../../../components/fullpage.vue';
 export default {
-  
+  components: {
+    FullPage
+  }
 }
 </script>
 
