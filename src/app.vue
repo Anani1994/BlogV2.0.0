@@ -13,6 +13,16 @@
         <Icon type="android-bicycle"></Icon>
         博客园
       </MenuItem>
+      <Submenu class="float-right" name="projects">
+        <template slot="title">
+          <Icon type="ios-folder-outline" />
+          项目演示
+        </template>
+        <MenuItem name="vue-market" @click.native="window.location.href='https://anani1994.github.io/anani1994.github.io/blog/projects/vue-market/index.html'">
+          <Icon type="md-appstore" />
+          购物商城
+        </MenuItem>
+      </Submenu>
       <MenuItem class="float-right" name="articles" @click.native="toPage('field')">
         <Icon type="ios-book-outline"></Icon>
         博文
