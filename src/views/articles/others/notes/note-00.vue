@@ -1,8 +1,8 @@
 <template>
     <BoWen>
-        <div style="background: rgb(35, 36, 31)">
+        <div class="px-1" style="background: rgb(35, 36, 31)">
             <div class="py-3 text-center">
-                <Button type="primary"><h1>笔记(一) - 全局注册组件和函数</h1></Button>
+                <Button type="primary"><h1>全局注册组件和函数</h1></Button>
             </div>
             <Tag class="ml-1 font-weight-bold" type="dot" color="primary">注册全局可用的函数</Tag>
             <Divider />
