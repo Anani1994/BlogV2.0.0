@@ -6,11 +6,11 @@
         董万宏的博客
       </div>
       <MenuItem class="float-right" name="github" @click.native="window.location.href='https://github.com/Anani1994'">
-          <Icon type="social-github-outline"></Icon>
+          <Icon type="logo-github" />
           Github
       </MenuItem>
       <MenuItem class="float-right" name="cnblogs" @click.native="window.location.href='http://www.cnblogs.com/anani/'">
-        <Icon type="android-bicycle"></Icon>
+        <Icon type="ios-planet-outline" />
         博客园
       </MenuItem>
       <Submenu class="float-right" name="projects">
@@ -28,7 +28,7 @@
         博文
       </MenuItem>
       <MenuItem class="float-right" name="main" @click.native="toPage('index')">
-        <Icon type="home"></Icon>
+        <Icon type="ios-home-outline" />
         首页
       </MenuItem>
     </Menu>

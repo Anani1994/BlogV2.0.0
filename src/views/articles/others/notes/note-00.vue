@@ -40,7 +40,7 @@
     export default defineSubassemblies;
     </code>
                 </pre>
-                <div class="text-center text-error">到底了，我可是有底线的。</div>
+                <div class="text-center text-white">到底了，我可是有底线的。<Icon type="ios-happy-outline" /></div>
             </div>
         </Col>
         <Col span="3">额外的内容</Col>

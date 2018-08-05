@@ -19,7 +19,7 @@
                             @on-select="setFieldActiveName">
                             <Submenu name="frontend">
                                 <template slot="title">
-                                    <Icon type="ios-book-outline"></Icon>
+                                    <Icon type="logo-html5" />
                                     前端
                                 </template>
                                 <MenuItem name="FE-1">HTML</MenuItem>
@@ -29,14 +29,14 @@
                             </Submenu>
                             <Submenu name="BE">
                                 <template slot="title">
-                                    <Icon type="ios-people"></Icon>
+                                    <Icon type="ios-cloud-outline" />
                                     后端
                                 </template>
                                 <MenuItem name="BE-1">杂烩</MenuItem>
                             </Submenu>
                             <Submenu name="OTH">
                                 <template slot="title">
-                                    <Icon type="stats-bars"></Icon>
+                                    <Icon type="ios-book-outline" />
                                     其它
                                 </template>
                                 <MenuItem name="OTH-1">样本演示</MenuItem>

@@ -41,6 +41,9 @@
 .field-container .ivu-menu-submenu-title:hover {
   background-color: gray;
 }
+.field-container .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+  background: gray;
+}
 .field-container .ivu-table-wrapper,
 .field-container .ivu-table,
 .field-container .ivu-table:after,

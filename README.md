@@ -1,6 +1,6 @@
 # Blog
 
-<code>node v8.9.1</code> &nbsp; <code>yarn v1.7.0</code>
+<code>node v8.11.0</code> &nbsp; <code>yarn v1.7.0</code>
 
 #### Build Setup
 

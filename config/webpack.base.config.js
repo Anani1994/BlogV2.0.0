@@ -85,7 +85,7 @@ module.exports = {
             loader: 'url-loader',
             options: { // 配置参数
               limit: 1024, // 比较标准，小于标准的图片转换为 base64 代码
-              name:'blog/images/[name].[hash].[ext]'
+              name:'blog/images/img-[name].[ext]'
             }
           }
         ]
