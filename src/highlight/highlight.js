@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import Hljs from 'highlight.js';
 import 'highlight.js/styles/monokai-sublime.css';
 let highLight = {};

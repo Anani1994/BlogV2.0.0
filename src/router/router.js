@@ -22,7 +22,7 @@ export const testRouter = {
   meta: {
     title: '通用组件测试'
   },
-  component: () => import('@/components/fullpage.vue')
+  component: () => import('@/components/fullpage/fullpage.vue')
 }
 
 let articlesPage = [];

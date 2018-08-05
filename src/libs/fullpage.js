@@ -29,6 +29,9 @@ class fullPage {
   }
 
   init () {
+    if (!this.pageAccount) {
+      return;
+    };
     this.setHeight(this.Options.height);
     this.addMouseWheel();
     if (this.Options.showSideNav) {
@@ -152,6 +155,9 @@ class fullPage {
 
   // 创建导航按钮
   createNav () {
+    if (!this.pageAccount) {
+      return;
+    }
     let sideNav = document.createElement('ul');
     sideNav.className = 'side-nav';
     this.container.appendChild(sideNav);

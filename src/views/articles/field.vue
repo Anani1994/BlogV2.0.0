@@ -40,7 +40,8 @@
                                     其它
                                 </template>
                                 <MenuItem name="OTH-1">样本演示</MenuItem>
-                                <MenuItem name="OTH-2">杂烩</MenuItem>
+                                <MenuItem name="OTH-2">笔记</MenuItem>
+                                <MenuItem name="OTH-3">杂烩</MenuItem>
                             </Submenu>
                         </Menu>
                     </div>
@@ -142,8 +143,10 @@
                     list = list.filter(item => item.field === 'beMixed');
                 } else if (this.activeName === 'OTH-1') {
                     list = list.filter(item => item.category === 'demo');
+                } else if (this.activeName === 'OTH-2') {
+                    list = list.filter(item => item.category === 'notes');
                 } else {
-                    // this.activeName === 'OTH-2'
+                    // this.activeName === 'OTH-3'
                     list = list.filter(item => item.category === 'othMixed');
                 }
                 if (list.length === 0) {

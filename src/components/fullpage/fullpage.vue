@@ -16,7 +16,7 @@
       li {
         margin: .5rem 0;
         padding: .3rem;
-        background: red;
+        background: #000;
         border-radius: 50%;
         cursor: pointer;
       }
@@ -25,37 +25,19 @@
       }
     }
   }
-  .test-nav {
-    position: fixed;
-    top: 70px;
-    right: 50px;
-    .active {
-      color: #ff0000;
-    }
-  }
 }
 </style>
 
 <template>
   <div class="page-container">
     <div class="container">
-      <div class="page" style="background: #5cadff;">1
-        <div class="test-nav">
-          <div class="test">1</div>
-          <div class="test">2</div>
-          <div class="test">3</div>
-          <div class="test">4</div>
-        </div>
-      </div>
-      <div class="page" style="background: #2d8cf0;">2</div>
-      <div class="page" style="background: #2db7f5;">3</div>
-      <div class="page" style="background: #2d85e4;">4</div>
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
-import fullPage from '../libs/fullPage.js'
+import fullPage from '../../libs/fullPage.js';
 export default {
   name: 'FullPage',
   data() {
@@ -68,7 +50,7 @@ export default {
       height: document.body.clientHeight - 90,
       delay: 1000,
       showSideNav: true,
-      showAppointedNode: '.test'
+      // showAppointedNode: true
     });
     this.fullPage.init();
   }
