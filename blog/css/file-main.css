@@ -31,6 +31,9 @@ body {
   border-right: 1px solid #fff;
 }
 
+p {
+  margin-bottom: 1rem;
+}
 .clearfix:after {
   display: block;
   content: "";
@@ -40,6 +43,9 @@ body {
 }
 .clearfix {
   zoom: 1;
+}
+.d-block {
+  display: block!important;
 }
 .d-flex {
   display: -ms-flexbox;
@@ -158,6 +164,9 @@ body {
 }
 .text-center {
   text-align: center!important;
+}
+.text-right {
+  text-align: right!important;
 }
 .text-white {
   color: #fff !important;

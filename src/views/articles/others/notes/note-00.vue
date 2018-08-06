@@ -2,46 +2,47 @@
     <BoWen>
         <div class="px-1" style="background: rgb(35, 36, 31)">
             <div class="py-3 text-center">
-                <Button type="primary"><h1>全局注册组件和函数</h1></Button>
+                <h1><Icon type="ios-book-outline" /> 全局注册组件和函数</h1>
+                <p class="pt-1">在 <code>webpack-vue</code> 项目中注册全局可用组件和函数</p>
             </div>
-            <Tag class="ml-1 font-weight-bold" type="dot" color="primary">注册全局可用的函数</Tag>
+           <h3 class="ml-1"><Icon type="logo-buffer" /> 注册全局可用的函数</h3>
             <Divider />
             <pre v-highlight>
                 <code class="js">// main.js
-    import util from './util.js'
-    Vue.prototype.$util = util;</code>
+import util from './util.js';
+Vue.prototype.$util = util;</code>
             </pre>
             <pre v-highlight>
                 <code class="js">// 在组件中使用
-    method:{
+method:{
     helloWorld() {
         // sayHello 为 util 上的方法
         this.$util.sayHello();
     }
-    }</code>
+}</code>
             </pre>
-            <Tag class="ml-1 font-weight-bold" type="dot" color="primary">注册全局组件</Tag>
+            <h3 class="ml-1"><Icon type="logo-buffer" /> 注册全局组件</h3>
             <Divider />
             <pre v-highlight>
                 <code class="js">// main.js
-    // 自定义全局组件
-    import defineSubassemblies from './components/defineSubassembly.js';
-    Vue.use(defineSubassemblies);</code>
+// 自定义全局组件
+import defineSubassemblies from './components/defineSubassembly.js';
+Vue.use(defineSubassemblies);</code>
             </pre>
             <pre v-highlight>
                 <code class="js">// defineSubassembly.js
-    import FullPage from './fullpage/fullpage.vue';
-    import PageItem from './fullpage/components/page.vue';
+import FullPage from './fullpage/fullpage.vue';
+import PageItem from './fullpage/components/page.vue';
 
-    const defineSubassemblies = {
+const defineSubassemblies = {
     install:function (Vue) {
         Vue.component('FullPage',FullPage);
         Vue.component('PageItem',PageItem);
     }
-    };
+};
 
-    export default defineSubassemblies;
-    </code>
+export default defineSubassemblies;
+</code>
             </pre>
             <FooterDivider></FooterDivider>
         </div>

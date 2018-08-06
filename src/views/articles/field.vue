@@ -70,7 +70,7 @@
                     {
                         title: '题目',
                         key: 'name',
-                        width: 200,
+                        width: 300,
                         ellipsis: true,
                         render: (h, params) => {
                             return h ('i-button', {
