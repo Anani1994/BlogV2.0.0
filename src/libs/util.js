@@ -40,4 +40,12 @@ util.debounce = function (method, context, event, delay) {
   }, delay);
 }
 
+// this fun is created for a block named BoWen
+util.toTop = function (eleId, n = 0) {
+  let target = document.querySelector(eleId);
+  let parent = document.querySelector('.innerContainer');
+  // parent.scrollTop = target.offsetTop - n;
+  $(parent).animate({scrollTop: target.offsetTop - n},"slow");
+}
+
 export default util;

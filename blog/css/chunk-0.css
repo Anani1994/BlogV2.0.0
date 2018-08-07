@@ -1,5 +1,8 @@
 
-p[data-v-134a40a3] {
-  text-indent: 2rem;
+ul[data-v-6914d227] {
+  list-style-position: inside;
+}
+ul li[data-v-6914d227] {
+  margin-left: 2rem;
 }
 

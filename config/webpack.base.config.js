@@ -1,4 +1,5 @@
 // 修改 webppack 配置文件后需重启才能生效
+const webpack = require('webpack');
 const path = require('path'); // node.js 中的基本包，用于处理路径
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const cleanWebpackPlugin = require('clean-webpack-plugin'); // 用于清除目录内容
@@ -110,6 +111,12 @@ module.exports = {
     // 打包之前使用这个插件尝试清除dist目录下的文件
     new cleanWebpackPlugin(['blog/css/*','blog/js/*','blog/images/*','index.html'], {
       root: path.resolve(__dirname, '../')
+    }),
+    // 配置 jQuery
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery',
     })
   ]
 }

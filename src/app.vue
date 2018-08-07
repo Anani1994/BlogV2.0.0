@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="app-container" :style="{background: allBgColor}">
     <Menu mode="horizontal" :active-name="this.activeName">
       <div class="float-left px-1 text-white">
         <Icon type="android-globe"></Icon>
@@ -21,6 +21,10 @@
         <MenuItem name="vue-market" @click.native="window.location.href='https://anani1994.github.io/anani1994.github.io/blog/projects/vue-market/index.html'">
           <Icon type="md-appstore" />
           购物商城
+        </MenuItem>
+        <MenuItem name="vue-market" @click.native="window.location.href='https://anani1994.github.io/blog/blog-project/2017/09/cartoon-qixi.html'">
+          <Icon type="md-people" />
+          情人节动画(仿制)
         </MenuItem>
       </Submenu>
       <MenuItem class="float-right" name="articles" @click.native="toPage('field')">
@@ -54,6 +58,9 @@ export default {
   computed: {
     activeName() {
       return this.$store.state.activeName;
+    },
+    allBgColor() {
+      return this.$store.state.allBgColor;
     }
   },
   mounted() {
@@ -72,7 +79,20 @@ export default {
       + ':' + (minute < 10 ? '0' + minute : minute )
       + ':' + (second < 10 ? '0' + second : second );
       document.querySelector('.time').innerHTML = result;
-    })
+    });
+    if (localStorage.defaultAllBgColor) {
+      this.$store.commit('setAllBgColor',localStorage.defaultAllBgColor);
+    }
+    if (localStorage.defaultBowenBgColor) {
+      this.$store.commit('setBowenBgColor',localStorage.defaultBowenBgColor);
+    }
+    if (localStorage.defaultBgColor) {
+      this.$store.commit('setBgColor',localStorage.defaultBgColor);
+    } else {
+      if (localStorage.defaultBgColor !== '') {
+        this.$store.commit('setBgColor','rgba(35, 36, 31,1)');
+      }
+    }
   }
 }
 </script>

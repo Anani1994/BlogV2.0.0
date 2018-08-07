@@ -44,6 +44,18 @@ p {
 .clearfix {
   zoom: 1;
 }
+.float-left {
+  float: left!important;
+}
+.float-right {
+  float: right!important;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
 .d-block {
   display: block!important;
 }
@@ -63,11 +75,8 @@ p {
   -ms-flex-align: center;
       align-items: center;
 }
-.float-left {
-  float: left!important;
-}
-.float-right {
-  float: right!important;
+.w-80 {
+  width: 80%!important;
 }
 .w-50 {
   width: 50%!important;
@@ -192,6 +201,15 @@ p {
 .font-weight-bolder {
   font-weight: bolder!important;
 }
+.border-none {
+  border: none;
+}
+.border-white {
+  border: 1px solid #fff;
+}
+.border-black {
+  border: 1px solid #000;
+}
 
 
 .page-container {
@@ -226,15 +244,32 @@ p {
 }
 
 
-.bo-wen[data-v-00694bec] {
+.bo-wen {
   height: calc(100% - 90px);
 }
-.bo-wen .outContainer[data-v-00694bec] {
+.bo-wen .outContainer {
   overflow: hidden;
 }
-.bo-wen .innerContainer[data-v-00694bec] {
+.bo-wen .innerContainer {
   overflow-x: hidden;
   overflow-y: scroll;
   width: calc(100% + 17px);
+}
+.bo-wen .ivu-steps-item {
+  cursor: pointer;
+}
+.bo-wen .ivu-steps .ivu-steps-head,
+.bo-wen .ivu-steps .ivu-steps-title {
+  background: transparent;
+  color: #fff;
+}
+.bo-wen .ivu-steps-item.ivu-steps-status-wait .ivu-steps-head-inner {
+  background-color: #23241f;
+}
+.bo-wen .ivu-color-picker-confirm-color {
+  color: #000;
+}
+.bo-wen p {
+  text-indent: 2rem;
 }
 

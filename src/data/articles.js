@@ -8,7 +8,7 @@ export default [
     tag: ['webpack','vue'],        //标签-暂未使用
     abstract: '如何让函数全局可用？ & 如何全局注册组件？',  // 概要
     postTime: '2018-08-05 18:41:35',       //发表时间
-    path: 'articles/others/notes/note-00',  // articles + <field> + <category> + <englishName>
+    path: '/articles/others/notes/note-00',  // articles + <field> + <category> + <englishName>
     pathName: 'note-00',                // 路径名称： englishName
     component: () => import('../views/articles/others/notes/note-00.vue')   // 文章组件位置，主要区别在于后两位: field + englishName
   },
@@ -20,8 +20,20 @@ export default [
     tag: ['JavaScript','jQuery'],        //标签-暂未使用
     abstract: '详细分析 offsetTop、offsetLeft、offsetWidth、offsetHeight、scrollTop... 以及 clientTop...等 DOM 属性的值。',  // 概要
     postTime: '2018-08-06 20:21:15',       //发表时间
-    path: 'articles/others/notes/note-01',  // articles + <field> + <category> + <englishName>
+    path: '/articles/others/notes/note-01',  // articles + <field> + <category> + <englishName>
     pathName: 'note-01',                // 路径名称： englishName
     component: () => import('../views/articles/others/notes/note-01.vue')   // 文章组件位置，主要区别在于后两位: field + englishName
+  },
+  {
+    id: 20180807,                  //时间做ID。  
+    name: '博客开发记录',   //field.vue中table的名称及网页title。。
+    field: 'others',             //领域及路径-（所有类型：backend,frontend,others）
+    category: 'othMixed',              //分类  - field.vue及路径-(所有类型：HTML,CSS,JS,mixed;beMixed;demo,notes,othMixed)
+    tag: ['webpack','vue','iview','JavaScript','jQuery'],        //标签-暂未使用
+    abstract: '记录博客开发过程中遇到的主要问题和解决方法，以及博客诞生至今已经解决或者尚且遗留的一些疑难杂症。',  // 概要
+    postTime: '2018-08-07 17:38:05',       //发表时间
+    path: '/articles/others/othMixed/blog-dev-log',  // articles + <field> + <category> + <englishName>
+    pathName: 'blog-dev-log',                // 路径名称： englishName
+    component: () => import('../views/articles/others/othMixed/blog-dev-log.vue')   // 文章组件位置，主要区别在于后两位: field + englishName
   },
 ]

@@ -6,14 +6,26 @@ Vue.use(Vuex);
 
 const store = new Vuex.Store({
   state: {
-    activeName: 'main'
+    activeName: 'main',
+    bgColor: '',
+    bowenBgColor: '',
+    allBgColor: ''
   },
   getters: {
     //
   },
   mutations: {
-    setActiveName(state,name) {
+    setActiveName(state, name) {
       state.activeName = name;
+    },
+    setBgColor(state, color) {
+      state.bgColor = color;
+    },
+    setBowenBgColor(state, color) {
+      state.bowenBgColor = color
+    },
+    setAllBgColor(state, color) {
+      state.allBgColor = color;
     }
   },
   actions: {
