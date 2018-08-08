@@ -98,7 +98,7 @@ export default {
 
 <style lang="less">
     .bo-wen {
-        height: calc(100% - 90px);
+        height: calc(100% - 90px)!important;
         .outContainer {
             overflow: hidden;
         }
@@ -113,7 +113,7 @@ export default {
         }
         .ivu-steps .ivu-steps-head,.ivu-steps .ivu-steps-title  {
             background: transparent;
-            color: #fff;
+            color: #fff!important;
         }
         .ivu-steps-item.ivu-steps-status-wait .ivu-steps-head-inner {
             background-color: #23241f;

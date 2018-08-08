@@ -245,7 +245,7 @@ p {
 
 
 .bo-wen {
-  height: calc(100% - 90px);
+  height: calc(100% - 90px) !important;
 }
 .bo-wen .outContainer {
   overflow: hidden;
@@ -261,7 +261,7 @@ p {
 .bo-wen .ivu-steps .ivu-steps-head,
 .bo-wen .ivu-steps .ivu-steps-title {
   background: transparent;
-  color: #fff;
+  color: #fff !important;
 }
 .bo-wen .ivu-steps-item.ivu-steps-status-wait .ivu-steps-head-inner {
   background-color: #23241f;

@@ -1,26 +1,11 @@
-# Blog
+<h2>Anani's Personal Blog</h2>
 
-<code>node v8.11.0</code> &nbsp; <code>yarn v1.7.0</code>
+<p>Here are some notes on daily learning and some erroneous records.</p>
+<p>Of course, there are some projects that I do,and show and introduce some projects.Welcome to exchange and discussion.</p>
 
-#### Build Setup
+<code>node v8.11.0</code> &nbsp; <code>yarn v1.7.0</code> &nbsp; <code>[view online][1]</code>
 
-``` bash
-# install dependencies
-$ yarn install
+#### Contact me ：[Send Email][2]
 
-# serve with hot reload at 192.168.1.6:8081
-$ yarn run dev
-
-# build electron application for production
-$ yarn run build
-
-```
-
-#### Contact me:
-* Author : [@Anani][1]
-* Blog：[Anani-cnblogs][2]
-* Contact me ：[Email][3]
-
-[1]: https://weibo.com/dongwanhong
-[2]: http://www.cnblogs.com/anani/
-[3]: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=zqqhoKm5pq2moI6oobajr6ei4K2how
+[1]: https://anani1994.github.io/#/
+[2]: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=zqqhoKm5pq2moI6oobajr6ei4K2how
