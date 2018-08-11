@@ -45,7 +45,7 @@ util.toTop = function (eleId, n = 0) {
   let target = document.querySelector(eleId);
   let parent = document.querySelector('.innerContainer');
   $(target).css({opacity: 0});
-  $(target).animate({opacity: 1},1000);
+  $(target).animate({opacity: 1},2000);
   // parent.scrollTop = target.offsetTop - n;
   $(parent).animate({scrollTop: target.offsetTop - n},1000);
 }
