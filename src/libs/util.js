@@ -50,4 +50,21 @@ util.toTop = function (eleId, n = 0) {
   $(parent).animate({scrollTop: target.offsetTop - n},1000);
 }
 
+util.formatDate = function  () {
+  let dateTime = new Date();
+  let year = dateTime.getFullYear();
+  let month = dateTime.getMonth() + 1;
+  let day = dateTime.getDate();
+  let hour = dateTime.getHours();
+  let minute = dateTime.getMinutes();
+  let second = dateTime.getSeconds();
+  let result = year
+  + '-' + (month  < 10 ? '0' + month :  month  )
+  + '-' + (day    < 10 ? '0' + day : day       )
+  + ' ' + (hour   < 10 ? '0' + hour : hour     )
+  + ':' + (minute < 10 ? '0' + minute : minute )
+  + ':' + (second < 10 ? '0' + second : second );
+  return result;
+}
+
 export default util;

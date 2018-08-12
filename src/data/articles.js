@@ -1,5 +1,6 @@
 export default [
   // 在此文件下写文章的相关信息，并在对应路径下创建文章的组件
+  // ..........................................................................................................................others/notes
   {
     id: 20180805,                  //时间做ID。  
     name: '全局注册组件和函数',   //field.vue中table的名称及网页title。。
@@ -36,6 +37,20 @@ export default [
     pathName: 'blog-dev-log',
     component: () => import('../views/articles/others/othMixed/blog-dev-log.vue')
   },
+  // ...........................................................................................................................frontend/JS
+  {
+    id: 20180811,
+    name: '详解 CSS 绝对定位',
+    field: 'frontend',
+    category: 'CSS',
+    tag: ['CSS','绝对定位'],
+    abstract: '简单介绍绝对定位的定义和用法，主要分析设置绝对定位后的影响。',
+    postTime: '2018-08-11 21:54:46',
+    path: '/articles/frontend/CSS/position-absolute',
+    pathName: 'position-absolute',
+    component: () => import('../views/articles/frontend/CSS/position-absolute.vue')
+  },
+  // ..........................................................................................................................frontend/CSS
   {
     id: 20180809,
     name: 'JavaScript 手动触发事件',
@@ -44,9 +59,9 @@ export default [
     tag: ['JavaScript','jQuery'],
     abstract: '简要介绍手动触发 JavaScript 事件的方法。',
     postTime: '2018-08-09 01:55:28',
-    path: '/articles/frontend/HTML/trigger-event',
+    path: '/articles/frontend/JS/trigger-event',
     pathName: 'trigger-event',
-    component: () => import('../views/articles/frontend/HTML/trigger-event.vue')
+    component: () => import('../views/articles/frontend/JS/trigger-event.vue')
   },
   {
     id: 20180809,
@@ -56,8 +71,20 @@ export default [
     tag: ['JavaScript','jQuery'],
     abstract: '简要介绍手动触发 JavaScript 事件的新方法，应用 W3C 最新的规范。',
     postTime: '2018-08-09 15:39:39',
-    path: '/articles/frontend/HTML/new-trigger-event',
+    path: '/articles/frontend/JS/new-trigger-event',
     pathName: 'new-trigger-event',
-    component: () => import('../views/articles/frontend/HTML/new-trigger-event.vue')
+    component: () => import('../views/articles/frontend/JS/new-trigger-event.vue')
+  },
+  {
+    id: 20180811,
+    name: 'JavaScript 函数节流和函数防抖',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: '通过限制函数的执行，从而提高 JavaScript 应用程序的性能。',
+    postTime: '2018-08-11 20:37:25',
+    path: '/articles/frontend/JS/throttle-debounce',
+    pathName: 'throttle-debounce',
+    component: () => import('../views/articles/frontend/JS/throttle-debounce.vue')
   },
 ]

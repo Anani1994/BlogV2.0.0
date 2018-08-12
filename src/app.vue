@@ -64,22 +64,7 @@ export default {
     }
   },
   mounted() {
-    setInterval(function formatDate () {
-      let dateTime = new Date();
-      let year = dateTime.getFullYear();
-      let month = dateTime.getMonth() + 1;
-      let day = dateTime.getDate();
-      let hour = dateTime.getHours();
-      let minute = dateTime.getMinutes();
-      let second = dateTime.getSeconds();
-      let result = year
-      + '-' + (month  < 10 ? '0' + month :  month  )
-      + '-' + (day    < 10 ? '0' + day : day       )
-      + ' ' + (hour   < 10 ? '0' + hour : hour     )
-      + ':' + (minute < 10 ? '0' + minute : minute )
-      + ':' + (second < 10 ? '0' + second : second );
-      document.querySelector('.time').innerHTML = result;
-    });
+    setInterval(() => { let result = this.$util.formatDate();document.querySelector('.time').innerHTML = result; },1000);
     if (localStorage.defaultAllBgColor) {
       this.$store.commit('setAllBgColor',localStorage.defaultAllBgColor);
     }
