@@ -39,19 +39,6 @@ export default [
   },
   // ...........................................................................................................................frontend/JS
   {
-    id: 20180811,
-    name: '详解 CSS 绝对定位',
-    field: 'frontend',
-    category: 'CSS',
-    tag: ['CSS','绝对定位'],
-    abstract: '简单介绍绝对定位的定义和用法，主要分析设置绝对定位后的影响。',
-    postTime: '2018-08-11 21:54:46',
-    path: '/articles/frontend/CSS/position-absolute',
-    pathName: 'position-absolute',
-    component: () => import('../views/articles/frontend/CSS/position-absolute.vue')
-  },
-  // ..........................................................................................................................frontend/CSS
-  {
     id: 20180809,
     name: 'JavaScript 手动触发事件',
     field: 'frontend',
@@ -86,5 +73,30 @@ export default [
     path: '/articles/frontend/JS/throttle-debounce',
     pathName: 'throttle-debounce',
     component: () => import('../views/articles/frontend/JS/throttle-debounce.vue')
+  },
+  // ..........................................................................................................................frontend/CSS
+  {
+    id: 20180811,
+    name: '详解 CSS 绝对定位',
+    field: 'frontend',
+    category: 'CSS',
+    tag: ['CSS','绝对定位'],
+    abstract: '简单介绍绝对定位的定义和用法，主要分析设置绝对定位后的影响。',
+    postTime: '2018-08-11 21:54:46',
+    path: '/articles/frontend/CSS/position-absolute',
+    pathName: 'position-absolute',
+    component: () => import('../views/articles/frontend/CSS/position-absolute.vue')
+  },
+  {
+    id: 20180812,
+    name: '外边距合并',
+    field: 'frontend',
+    category: 'CSS',
+    tag: ['CSS','外边距'],
+    abstract: '块级元素的上外边距和下外边距有时会合并（或折叠）为一个外边距，其大小取其中的最大者，这种行为称为外边距折叠。',
+    postTime: '2018-08-12 16:09:58',
+    path: '/articles/frontend/CSS/margin-collapsing',
+    pathName: 'margin-collapsing',
+    component: () => import('../views/articles/frontend/CSS/margin-collapsing.vue')
   },
 ]
