@@ -37,6 +37,18 @@ export default [
     pathName: 'blog-dev-log',
     component: () => import('../views/articles/others/othMixed/blog-dev-log.vue')
   },
+  {
+    id: 20180823,
+    name: '搭建 webpack-angular 基础开发环境',
+    field: 'others',
+    category: 'othMixed',
+    tag: ['webpack','angular','JavaScript','jQuery'],
+    abstract: '由于公司的项目主要使用 AngularJS，所以准备搭建一个基本的开发环境，以便更好的学习和调试组件等。',
+    postTime: '2018-08-23 23:33:38',
+    path: '/articles/others/othMixed/angular-dev',
+    pathName: 'angular-dev',
+    component: () => import('../views/articles/others/othMixed/angular-dev.vue')
+  },
   // ...........................................................................................................................frontend/JS
   {
     id: 20180809,
