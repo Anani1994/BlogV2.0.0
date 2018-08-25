@@ -55,7 +55,7 @@
             <ul>
                 <li>
                     配置 jQuery
-                    <pre class="border-white" v-highlight><code class="js">// 安装
+                    <pre v-highlight><code class="js">// 安装
 yarn add jquery
 // 配置 webpack.base.config.js
 const webpack = require('webpack');

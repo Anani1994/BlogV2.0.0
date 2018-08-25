@@ -75,7 +75,7 @@ export default {
       this.$store.commit('setBgColor',localStorage.defaultBgColor);
     } else {
       if (localStorage.defaultBgColor !== '') {
-        this.$store.commit('setBgColor','rgba(35, 36, 31,1)');
+        this.$store.commit('setBgColor','rgba(35,36,31,.8)');
       }
     }
   }
@@ -92,7 +92,7 @@ html,body {
   width: 100%;
   height: 100%;
   color: #fff;
-  background-image: url('./assets/images/app-bg-img.jpeg');
+  background-image: url('./assets/images/app-bg-img.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   overflow: hidden;

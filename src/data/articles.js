@@ -16,14 +16,14 @@ export default [
   {
     id: 20180806,
     name: '详解 offsetTop、scrollTop 等DOM属性',
-    field: 'others',
-    category: 'notes',
+    field: 'frontend',
+    category: 'JS',
     tag: ['JavaScript','jQuery'],
     abstract: '详细分析 offsetTop、offsetLeft、offsetWidth、offsetHeight、scrollTop... 以及 clientTop...等 DOM 属性的值。',
     postTime: '2018-08-06 20:21:15',
-    path: '/articles/others/notes/note-01',
-    pathName: 'note-01',
-    component: () => import('../views/articles/others/notes/note-01.vue')
+    path: '/articles/frontend/JS/top-left-width-height',
+    pathName: 'top-left-width-height',
+    component: () => import('../views/articles/frontend/JS/top-left-width-height.vue')
   },
   {
     id: 20180807,
@@ -40,14 +40,14 @@ export default [
   {
     id: 20180823,
     name: '搭建 webpack-angular 基础开发环境',
-    field: 'others',
-    category: 'othMixed',
+    field: 'frontend',
+    category: 'mixed',
     tag: ['webpack','angular','JavaScript','jQuery'],
     abstract: '由于公司的项目主要使用 AngularJS，所以准备搭建一个基本的开发环境，以便更好的学习和调试组件等。',
     postTime: '2018-08-23 23:33:38',
-    path: '/articles/others/othMixed/angular-dev',
+    path: '/articles/frontend/mixed/angular-dev',
     pathName: 'angular-dev',
-    component: () => import('../views/articles/others/othMixed/angular-dev.vue')
+    component: () => import('../views/articles/frontend/mixed/angular-dev.vue')
   },
   // ...........................................................................................................................frontend/JS
   {

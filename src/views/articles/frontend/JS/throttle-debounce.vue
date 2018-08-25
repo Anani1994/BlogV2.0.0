@@ -40,7 +40,7 @@
             <h3 id="throttle-debounce-throttle" class="ml-1"><Icon type="logo-buffer" /> 函数节流</h3>
             <Divider />
             <p>触发函数事件后，规定时间间隔内无法连续调用，只有上一次函数执行后，过了规定的时间间隔，才能进行下一次的函数调用。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="js">// method 回调函数
+            <pre class="ml-2" v-highlight><code class="js">// method 回调函数
 // context 执行环境
 // delay 间隔时间
 const throttle = function (method, context, delay) {
@@ -58,7 +58,7 @@ const throttle = function (method, context, delay) {
             <h3 id="throttle-debounce-debounce" class="ml-1"><Icon type="logo-buffer" /> 函数去抖</h3>
             <Divider />
             <p>多次触发事件后，事件处理函数只在触发操作结束时执行一次。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="js">// method 回调函数
+            <pre class="ml-2" v-highlight><code class="js">// method 回调函数
 // context 执行环境
 // delay 时间间隔
 const debounce = function (method, context, delay) {

@@ -76,12 +76,12 @@ export default {
             localStorage.removeItem('defaultBgColor');
             localStorage.removeItem('defaultBowenBgColor');
             localStorage.removeItem('defaultAllBgColor');
-            this.$store.commit('setBgColor','rgba(35, 36, 31,1)');
+            this.$store.commit('setBgColor','rgba(35,36,31,.8)');
             this.$store.commit('setBowenBgColor','');
             this.$store.commit('setAllBgColor','');
             this.defaultAllBgColor = '';
             this.defaultBowenBgColor = '';
-            this.defaultBgColor = 'rgba(35, 36, 31,1)';
+            this.defaultBgColor = 'rgba(35,36,31,.8)';
             this.$Message.success('设置成功');
         }
     },

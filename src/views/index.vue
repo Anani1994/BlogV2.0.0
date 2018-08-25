@@ -65,7 +65,7 @@
     top: 0;
     left: 0;
     padding: 4px;
-    color: #898785;
+    color: #5d6a86;
   }
   .link-ball a:hover {
     transform: scale(1.5);

@@ -60,13 +60,13 @@
             <p>手动触发事件的实现主要有两种方式，其一是通过 jQuery 提供的 trigger() 方法，再者就是使用原生 JavaScript 实现。</p>
             <h4 id="trigger-event-method-jq" class="m-1"><Icon type="logo-buffer" /> jQuery</h4>
             <p><code>trigger()</code> 方法触发被选元素上指定的事件以及事件的默认行为（比如表单提交）。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="js">// 语法
+            <pre class="ml-2" v-highlight><code class="js">// 语法
 $(selector).trigger(event,eventObj,param1,param2,...)
 // 参数：event	必需。规定指定元素上要触发的事件。包括自定义事件和其它标准事件。
 // 参数：param1,param2,...	可选。传递到事件处理程序的参数</code></pre>
             <h4 id="trigger-event-method-js" class="m-1"><Icon type="logo-buffer" /> 原生 JavaScript</h4>
             <p>使用原生 JavaScript 手动触发事件大概包括创建一个事件对象、初始化该事件对象、最后就是触发它。这其中涉及到的方法包括：<code>createEvent</code> <code>initEvent</code> <code>dispatchEvent</code>。其大致步骤如下所示。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="js">function trigger (selector, eveType) {
+            <pre class="ml-2" v-highlight><code class="js">function trigger (selector, eveType) {
     // 获取 DOM 元素：用于绑定或触发事件的 DOM 节点
     let ele = document.querySelector(selector);
     // 创建一个新的事件（Event）
@@ -86,7 +86,7 @@ $(selector).trigger(event,eventObj,param1,param2,...)
     }
 }</code></pre>
             <p>测试代码如下所示。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="html">&lt;!DOCTYPE html&gt;
+            <pre class="ml-2" v-highlight><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
 &lt;head&gt;
     &lt;title&gt;测试&lt;/title&gt;
@@ -115,7 +115,7 @@ document.querySelector('button').onclick = function () {
 &lt;/script&gt;
 &lt;/html&gt;</code></pre>
             <p>到此对于手动触发函数的关键知识已经完结了，后面对 trigger() 函数进行了改进。</p>
-            <pre class="ml-2 border-white" v-highlight><code>function trigger (selector, eveType, bubbles, cancelable, method) {
+            <pre class="ml-2" v-highlight><code>function trigger (selector, eveType, bubbles, cancelable, method) {
     // 获取 DOM 元素：用于绑定或触发事件的 DOM 节点
     let ele = document.querySelector(selector);
     // 创建一个新的事件（Event）
@@ -145,7 +145,7 @@ document.querySelector('button').onclick = function () {
     }
 }</code></pre>
             <p>测试代码如下所示。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="html">&lt;!DOCTYPE html&gt;
+            <pre class="ml-2" v-highlight><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
 &lt;head&gt;
     &lt;title&gt;测试&lt;/title&gt;

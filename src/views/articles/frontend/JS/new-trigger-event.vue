@@ -24,7 +24,7 @@
             <h3 id="trigger-event-event"><Icon type="logo-buffer" /> Event 构造函数</h3>
             <Divider />
             <div class="ml-2">绝大多数现代浏览器中都会支持这个构造函数（Internet Explorer 例外）。想要了解 <Tag @click.native="toPage('trigger-event')">过时的方法</Tag> 请参考上面的描述。</div>
-            <pre class="ml-2 border-white" v-highlight><code class="js">function trigger (selector, eveType, setting) { // eveType：所创事件的名称，setting：详见下面的实例
+            <pre class="ml-2" v-highlight><code class="js">function trigger (selector, eveType, setting) { // eveType：所创事件的名称，setting：详见下面的实例
     let ele = document.querySelector(selector);
     let eve = new Event(eveType, setting);
     // 添加对该事件的监听
@@ -34,7 +34,7 @@
     ele.dispatchEvent(eve);
 }</code></pre>
             <p>测试代码如下所示。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="js">&lt;!DOCTYPE html&gt;
+            <pre class="ml-2" v-highlight><code class="js">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
 &lt;head&gt;
     &lt;title&gt;测试&lt;/title&gt;
@@ -68,7 +68,7 @@ document.querySelector('button').onclick = function () {
 &lt;/html&gt;
 </code></pre>
             <p>我们也可以触发某个元素上已经监听的事件，测试代码如下所示。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="html">&lt;!DOCTYPE html&gt;
+            <pre class="ml-2" v-highlight><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
 &lt;head&gt;
     &lt;title&gt;测试&lt;/title&gt;
@@ -95,7 +95,7 @@ document.querySelector('button').onclick = function () {
             <h3 id="trigger-event-cusEve"><Icon type="logo-buffer" /> CustomEvent</h3>
             <Divider />
             <P>要向事件对象添加更多数据，可以使用 <code>CustomEvent</code>，<code>detail</code> 属性可用于传递自定义数据 <code>CustomEvent</code> 接口可以为 <code>event</code> 对象添加更多的数据。</P>
-            <pre class="ml-2 border-white" v-highlight><code class="js">function trigger (selector, eveType) {
+            <pre class="ml-2" v-highlight><code class="js">function trigger (selector, eveType) {
     let ele = document.querySelector(selector);
     let eve = new CustomEvent('click', { 'sayHello': 'Hello' });
     ele.addEventListener(eveType, function(event) {
@@ -104,7 +104,7 @@ document.querySelector('button').onclick = function () {
     ele.dispatchEvent(eve);
 }</code></pre>
             <p>测试代码如下所示。</p>
-            <pre class="ml-2 border-white" v-highlight><code class="html">&lt;!DOCTYPE html&gt;
+            <pre class="ml-2" v-highlight><code class="html">&lt;!DOCTYPE html&gt;
 &lt;html lang="zh-CN"&gt;
 &lt;head&gt;
     &lt;title&gt;测试&lt;/title&gt;
