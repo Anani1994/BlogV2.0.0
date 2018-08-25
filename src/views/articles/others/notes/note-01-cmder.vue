@@ -27,6 +27,12 @@
                     @click.native="toTop('#note-01-cmder-lang', 30)">
                 </Step>
                 <Step
+                    title="修改符号"
+                    content="修改默认显示的符号为美元符号"
+                    status="wait"
+                    @click.native="toTop('#note-01-cmder-symbol', 30)">
+                </Step>
+                <Step
                     title="常用命令"
                     content="列举开发常用的 Linux 命令"
                     status="wait"
@@ -56,7 +62,7 @@
                     <p>把 Cmder.exe 存放的目录添加到系统的环境变量中。</p>
                 </li>
                 <li>添加 Cmder 到右键菜单
-                    <p>以管理员身份运行系统的 cmd，输入 Cmder.exe /REGISTER ALL 运行。</p>
+                    <div class="ml-2 mb-1">以管理员身份运行系统的 cmd，输入 <Tag color="default">Cmder.exe /REGISTER ALL</Tag> 运行。</div>
                 </li>
             </ul>
             <h3 id="note-01-cmder-lang" class="ml-1"><Icon type="logo-buffer" /> 解决中文乱码</h3>
@@ -64,6 +70,11 @@
             <pre v-highlight><code class="js">// Settings->Startup->Environment 添加
 set LANG=zh_CN.UTF-8
 set LC_ALL=zh_CN.utf8</code></pre>
+            <h3 id="note-01-cmder-symbol" class="ml-1"><Icon type="logo-buffer" /> 修改符号</h3>
+            <Divider />
+            <p>注释如下所示的第一行，并添加第二行，就可以将默认的符号改为美元符号。</p>
+            <pre v-highlight><code class="lua">-- local cmder_prompt = "\x1b[1;32;40m{cwd} {git}{hg}{svn} \n\x1b[1;39;40m{lamb} \x1b[0m"
+local cmder_prompt = "\x1b[1;32;40m{cwd} {git}{hg}{svn} \n\x1b[1;37;40m$ \x1b[0m"</code></pre>
             <h3 id="note-01-cmder-order" class="ml-1"><Icon type="logo-buffer" /> 常用命令</h3>
             <Divider />
             <h4 class="ml-2">系统信息</h4>
@@ -136,7 +147,7 @@ set LC_ALL=zh_CN.utf8</code></pre>
 <Tag color="default">shutdown -r now</Tag> 重启(1) 
 <Tag color="default">reboot</Tag> 重启(2) 
 <Tag color="default">logout</Tag> 注销 </code></pre>
-            <p>以上列举的常用命令并没有一一尝试，所以可能有的命令会无效，可作为日常使用过程中的参考模板。</p>
+            <p class="text-warn">以上列举的常用命令并没有一一尝试，所以可能有的命令会无效，可作为日常使用过程中的参考模板。</p>
             <FooterDivider></FooterDivider>
         </div>
     </BoWen>
