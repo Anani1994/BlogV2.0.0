@@ -14,6 +14,18 @@ export default [
     component: () => import('../views/articles/others/notes/note-00.vue')   // 文章组件位置，主要区别在于后两位: field + englishName
   },
   {
+    id: 20180805,                  //时间做ID。  
+    name: 'windows 搭建开发环境之安装使用 Cmder',   //field.vue中table的名称及网页title。。
+    field: 'others',             //领域及路径-（所有类型：backend,frontend,others）
+    category: 'notes',              //分类  - field.vue及路径-(所有类型：HTML,CSS,JS,mixed;beMixed;demo,notes,othMixed)
+    tag: ['windows','Cmder'],        //标签-暂未使用
+    abstract: 'Cmder可以说是 Windows 下一款非常好用的 cmd 替代品，它不仅好用，而且功能强大，界面美观，非常适合在 Windows 下进行开发时使用。',  // 概要
+    postTime: '2018-08-25 20:11:47',       //发表时间
+    path: '/articles/others/notes/note-01-cmder',  // articles + <field> + <category> + <englishName>
+    pathName: 'note-01-cmder',                // 路径名称： englishName
+    component: () => import('../views/articles/others/notes/note-01-cmder.vue')   // 文章组件位置，主要区别在于后两位: field + englishName
+  },
+  {
     id: 20180806,
     name: '详解 offsetTop、scrollTop 等DOM属性',
     field: 'frontend',
