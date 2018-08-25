@@ -18,7 +18,7 @@
         </div>
         <div class="px-1">
             <div class="py-3 text-center">
-                <h1><Icon type="ios-book-outline" />搭建 webpack-angular 基础开发环境</h1>
+                <h1><Icon type="ios-book-outline" /> 搭建 webpack-angular 基础开发环境</h1>
                 <p class="pt-1">简述搭建 Angular 开发环境的背景和大体内容</p>
             </div>
             <h3 id="angular-dev-bg" class="ml-1"><Icon type="logo-buffer" /> 背景</h3>
