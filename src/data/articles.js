@@ -2,28 +2,38 @@ export default [
   // 在此文件下写文章的相关信息，并在对应路径下创建文章的组件
   // ..........................................................................................................................others/notes
   {
-    id: 20180805,                  //时间做ID。  
-    name: '全局注册组件和函数',   //field.vue中table的名称及网页title。。
-    field: 'others',             //领域及路径-（所有类型：backend,frontend,others）
-    category: 'notes',              //分类  - field.vue及路径-(所有类型：HTML,CSS,JS,mixed;beMixed;demo,notes,othMixed)
-    tag: ['webpack','vue'],        //标签-暂未使用
-    abstract: '如何让函数全局可用？ & 如何全局注册组件？',  // 概要
-    postTime: '2018-08-05 18:41:35',       //发表时间
-    path: '/articles/others/notes/note-00',  // articles + <field> + <category> + <englishName>
-    pathName: 'note-00',                // 路径名称： englishName
-    component: () => import('../views/articles/others/notes/note-00.vue')   // 文章组件位置，主要区别在于后两位: field + englishName
+    //时间做ID。 
+    id: 20180805, 
+    //field.vue中table的名称及网页title。。
+    name: 'Vue 注册全局组件和函数',
+    //领域及路径-（所有类型：backend,frontend,others）
+    field: 'frontend',
+    //分类  - field.vue及路径-(所有类型：HTML,CSS,JS,VueJS,AngularJS,mixed;beMixed;demo,notes,othMixed)
+    category: 'VueJS',
+    //标签-暂未使用: 后期可做全局搜索
+    tag: ['webpack','vue'],
+    // 概要
+    abstract: '如何让函数全局可用？ & 如何全局注册组件？',
+    //发表时间
+    postTime: '2018-08-05 18:41:35',
+    // articles + <field> + <category> + <englishName>
+    path: '/articles/frontend/AngularJS/note-00',
+    // 路径名称： englishName
+    pathName: 'note-00',
+    // 文章组件位置，主要区别在于后两位: field + englishName
+    component: () => import('../views/articles/frontend/AngularJS/note-00.vue')
   },
   {
-    id: 20180805,                  //时间做ID。  
-    name: 'windows 搭建开发环境之安装使用 Cmder',   //field.vue中table的名称及网页title。。
-    field: 'others',             //领域及路径-（所有类型：backend,frontend,others）
-    category: 'notes',              //分类  - field.vue及路径-(所有类型：HTML,CSS,JS,mixed;beMixed;demo,notes,othMixed)
-    tag: ['windows','Cmder'],        //标签-暂未使用
-    abstract: 'Cmder可以说是 Windows 下一款非常好用的 cmd 替代品，它不仅好用，而且功能强大，界面美观，非常适合在 Windows 下进行开发时使用。',  // 概要
-    postTime: '2018-08-25 20:11:47',       //发表时间
-    path: '/articles/others/notes/note-01-cmder',  // articles + <field> + <category> + <englishName>
-    pathName: 'note-01-cmder',                // 路径名称： englishName
-    component: () => import('../views/articles/others/notes/note-01-cmder.vue')   // 文章组件位置，主要区别在于后两位: field + englishName
+    id: 20180805,
+    name: 'windows 搭建开发环境之安装使用 Cmder',
+    field: 'others',
+    category: 'notes',
+    tag: ['windows','Cmder'],
+    abstract: 'Cmder可以说是 Windows 下一款非常好用的 cmd 替代品，它不仅好用，而且功能强大，界面美观，非常适合在 Windows 下进行开发时使用。',
+    postTime: '2018-08-25 20:11:47',
+    path: '/articles/others/notes/note-01-cmder',
+    pathName: 'note-01-cmder',
+    component: () => import('../views/articles/others/notes/note-01-cmder.vue')
   },
   {
     id: 20180806,

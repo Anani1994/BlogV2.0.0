@@ -25,7 +25,9 @@
                                 <MenuItem name="FE-1">HTML</MenuItem>
                                 <MenuItem name="FE-2">CSS</MenuItem>
                                 <MenuItem name="FE-3">JavaScript</MenuItem>
-                                <MenuItem name="FE-4">杂烩</MenuItem>
+                                <MenuItem name="FE-4">VueJS</MenuItem>
+                                <MenuItem name="FE-5">AngularJS</MenuItem>
+                                <MenuItem name="FE-6">杂烩</MenuItem>
                             </Submenu>
                             <Submenu name="BE">
                                 <template slot="title">
@@ -138,6 +140,10 @@
                 } else if (this.activeName === 'FE-3') {
                     list = list.filter(item => item.category === 'JS');
                 } else if (this.activeName === 'FE-4') {
+                    list = list.filter(item => item.category === 'VueJS');
+                } else if (this.activeName === 'FE-5') {
+                    list = list.filter(item => item.category === 'AngularJS');
+                } else if (this.activeName === 'FE-6') {
                     list = list.filter(item => item.category === 'mixed');
                 } else if (this.activeName === 'BE-1') {
                     list = list.filter(item => item.field === 'beMixed');
