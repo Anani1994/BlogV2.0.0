@@ -96,7 +96,7 @@ html,body {
   width: 100%;
   height: 100%;
   color: #fff;
-  background-image: url('./assets/images/app-bg-img.jpg');
+  background:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.5)),url('./assets/images/app-bg-img.jpeg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
   overflow: hidden;

@@ -58,7 +58,7 @@
             <h3 id="note-01-cmder-quick" class="ml-1"><Icon type="logo-buffer" /> 设置快捷操作</h3>
             <Divider />
             <ul class="ml-2">
-                <li>Win + R 下输入 cmder
+                <li使 >Win + R 下输入 cmder 生效
                     <p>把 Cmder.exe 存放的目录添加到系统的环境变量中。</p>
                 </li>
                 <li>添加 Cmder 到右键菜单
@@ -72,7 +72,7 @@ set LANG=zh_CN.UTF-8
 set LC_ALL=zh_CN.utf8</code></pre>
             <h3 id="note-01-cmder-symbol" class="ml-1"><Icon type="logo-buffer" /> 修改符号</h3>
             <Divider />
-            <p>注释如下所示的第一行，并添加第二行，就可以将默认的符号改为美元符号。</p>
+            <p>在 vendor/clink.lua 注释如下所示的第一行，并添加第二行，就可以将默认的符号改为美元符号。</p>
             <pre v-highlight><code class="lua">-- local cmder_prompt = "\x1b[1;32;40m{cwd} {git}{hg}{svn} \n\x1b[1;39;40m{lamb} \x1b[0m"
 local cmder_prompt = "\x1b[1;32;40m{cwd} {git}{hg}{svn} \n\x1b[1;37;40m$ \x1b[0m"</code></pre>
             <h3 id="note-01-cmder-order" class="ml-1"><Icon type="logo-buffer" /> 常用命令</h3>

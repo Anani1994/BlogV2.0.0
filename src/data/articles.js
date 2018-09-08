@@ -17,12 +17,24 @@ export default [
     //发表时间
     postTime: '2018-08-05 18:41:35',
     // articles + <field> + <category> + <englishName>
-    path: '/articles/frontend/AngularJS/note-00',
+    path: '/articles/frontend/VueJS/note-00',
     // 路径名称： englishName
     pathName: 'note-00',
     // 文章组件位置，主要区别在于后两位: field + englishName
-    component: () => import('../views/articles/frontend/AngularJS/note-00.vue')
+    component: () => import('../views/articles/frontend/VueJS/note-00.vue')
   },
+  // {
+  //   id: 20180826,
+  //   name: '浅析 angular 指令的作用域',
+  //   field: 'frontend',
+  //   category: 'AngularJS',
+  //   tag: ['JavaScript','angular','scope'],
+  //   abstract: '简单介绍 AngularJS 指令的使用。',
+  //   postTime: '2018-08-26 20:05:45',
+  //   path: '/articles/frontend/AngularJS/angular-directive',
+  //   pathName: 'angular-directive',
+  //   component: () => import('../views/articles/frontend/AngularJS/angular-directive.vue')
+  // },
   {
     id: 20180805,
     name: 'windows 搭建开发环境之安装使用 Cmder',
