@@ -31,6 +31,37 @@ body {
   border-right: 1px solid #fff;
 }
 
+.markdown-content {
+  padding: 0 16px;
+}
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6 {
+  margin-top: 45px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #626362;
+  border-left: 5px solid #797878;
+}
+.markdown-content h1 + p,
+.markdown-content h2 + p,
+.markdown-content h3 + p,
+.markdown-content h4 + p,
+.markdown-content h5 + p,
+.markdown-content h6 + p {
+  margin-top: 1rem;
+}
+.markdown-content pre {
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
 p {
   margin-bottom: 1rem;
 }
@@ -217,6 +248,9 @@ p {
 }
 .text-warn {
   color: #ff9900 !important;
+}
+.bg-hljs {
+  background-color: #23241f !important;
 }
 .font-weight-bold {
   font-weight: bold!important;

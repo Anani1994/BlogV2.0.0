@@ -36,16 +36,45 @@ export default [
   //   component: () => import('../views/articles/frontend/AngularJS/angular-directive.vue')
   // },
   {
-    id: 20180805,
-    name: 'windows 搭建开发环境之安装使用 Cmder',
+    //时间做ID。 
+    id: 20180915, 
+    name: '问题收录集（1）',
     field: 'others',
     category: 'notes',
+    tag: ['webpack','vue', 'JavaScript'],
+    abstract: '收集整理开发路上遇到的各种问题。',
+    //发表时间
+    postTime: '2018-09-15 01:23:38',
+    // articles + <field> + <category> + <englishName>
+    path: '/articles/others/notes/note-02',
+    // 路径名称： englishName
+    pathName: 'note-02',
+    // 文章组件位置，主要区别在于后两位: field + englishName
+    component: () => import('../views/articles/others/notes/note-02.vue')
+  },
+  {
+    id: 20180909,
+    name: '伪元素 ::before 和 ::after',
+    field: 'frontend',
+    category: 'CSS',
+    tag: ['CSS','伪类'],
+    abstract: 'CSS伪元素是用来添加一些选择器的特殊效果。',
+    postTime: '2018-09-09 12:34:33',
+    path: '/articles/frontend/CSS/pseudo-before-after',
+    pathName: 'pseudo-before-after',
+    component: () => import('../views/articles/frontend/CSS/pseudo-before-after.vue')
+  },
+  {
+    id: 20180805,
+    name: 'windows 搭建开发环境之安装使用 Cmder',
+    field: 'frontend',
+    category: 'mixed',
     tag: ['windows','Cmder'],
     abstract: 'Cmder可以说是 Windows 下一款非常好用的 cmd 替代品，它不仅好用，而且功能强大，界面美观，非常适合在 Windows 下进行开发时使用。',
     postTime: '2018-08-25 20:11:47',
-    path: '/articles/others/notes/note-01-cmder',
+    path: '/articles/frontend/mixed/note-01-cmder',
     pathName: 'note-01-cmder',
-    component: () => import('../views/articles/others/notes/note-01-cmder.vue')
+    component: () => import('../views/articles/frontend/mixed/note-01-cmder.vue')
   },
   {
     id: 20180806,
@@ -75,13 +104,13 @@ export default [
     id: 20180823,
     name: '搭建 webpack-angular 基础开发环境',
     field: 'frontend',
-    category: 'mixed',
+    category: 'AngularJS',
     tag: ['webpack','angular','JavaScript','jQuery'],
     abstract: '由于公司的项目主要使用 AngularJS，所以准备搭建一个基本的开发环境，以便更好的学习和调试组件等。',
     postTime: '2018-08-23 23:33:38',
-    path: '/articles/frontend/mixed/angular-dev',
+    path: '/articles/frontend/AngularJS/angular-dev',
     pathName: 'angular-dev',
-    component: () => import('../views/articles/frontend/mixed/angular-dev.vue')
+    component: () => import('../views/articles/frontend/AngularJS/angular-dev.vue')
   },
   // ...........................................................................................................................frontend/JS
   {

@@ -3,7 +3,7 @@
     <Menu mode="horizontal" :active-name="this.activeName">
       <div class="float-left px-1 text-white">
         <Icon type="android-globe"></Icon>
-        董万宏的博客
+        码良的博客
       </div>
       <MenuItem class="float-right" name="github" @click.native="window.location.href='https://github.com/Anani1994'">
           <Icon type="logo-github" />
@@ -43,7 +43,7 @@
     <router-view></router-view>
     <div class="bottom">
       Created in 2018<span class="border-right">
-      </span>网站开发者：<a class="text-white" href="">董万宏</a>
+      </span>网站开发者：<a class="text-white" href="">码良</a>
       <span class="border-right"></span>
       <span class="time"></span>
     </div>
