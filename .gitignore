@@ -1,3 +1,4 @@
+# common setting
 .DS_Store
 node_modules/
 /dist/
@@ -14,7 +15,7 @@ yarn-error.log*
 *.sln
 
 # for Coding
-# /old-blog/
+blog/projects/old-blog/
 
-#for GitHub
-/vue-market/
+# for GitHub
+# blog/projects/vue-market/
