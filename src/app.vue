@@ -22,13 +22,9 @@
           <Icon type="md-appstore" />
           购物商城
         </MenuItem>
-        <MenuItem name="vue-market" @click.native="window.location.href='http://anani.coding.me/blog/blog/projects/old-blog/index.html'">
+        <MenuItem name="vue-market" @click.native="window.location.href='https://anani1994.github.io/anani1994.github.io/blog/projects/old-blog/index.html'">
           <Icon type="md-alert" />
           前往旧博客
-        </MenuItem>
-        <MenuItem name="vue-market" @click.native="window.location.href='http://anani.coding.me/blog/blog/projects/old-blog/blog-project/2017/09/cartoon-qixi.html'">
-          <Icon type="md-people" />
-          情人节动画(仿制)
         </MenuItem>
       </Submenu>
       <MenuItem class="float-right" name="articles" @click.native="toPage('field')">
