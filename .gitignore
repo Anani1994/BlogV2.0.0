@@ -15,7 +15,7 @@ yarn-error.log*
 *.sln
 
 # for Coding
-blog/projects/old-blog/
+# blog/projects/old-blog/
 
 # for GitHub
-# blog/projects/vue-market/
+blog/projects/vue-market/
