@@ -1,12 +1,13 @@
 <template>
     <BoWen>
         <div class="pt-3 text-center">
-            <h1><Icon type="ios-book-outline" /> 问题收录集（1）</h1>
+            <h1>
+                <Icon type="ios-book-outline" /> 问题收录集（1）</h1>
             <p class="pt-1">收集整理开发路上遇到的各种问题。</p>
         </div>
         <div class="markdown-content">
-<h5>隐藏滚动条且保持滚动效果</h5>
-<pre v-highlight><code class="CSS">.outer-container {
+            <h5>隐藏滚动条且保持滚动效果</h5>
+            <pre v-highlight><code class="CSS">.outer-container {
     overflow: hidden;        // 隐藏滚动条
     width: 240px;          // 内容宽度，同时配合子元素
     height: 100%;
@@ -26,15 +27,15 @@
     margin-right: -17px;
 }
 </code></pre>
-<h5>error: pathspec &#39;field&#39;&#39; did not match any file(s) known to git.</h5>
-<pre v-highlight><code class="js">// 需要在提交时将描述信息放在两重引号中，原因疑是 git 无法识别 文件名或路径
+            <h5>error: pathspec &#39;field&#39;&#39; did not match any file(s) known to git.</h5>
+            <pre v-highlight><code class="js">// 需要在提交时将描述信息放在两重引号中，原因疑是 git 无法识别 文件名或路径
 git add .
 git commit -m &quot;&#39;your message&#39;&quot;
 git pull origin master
 git push origin master
 </code></pre>
-<h5>检查是否登录后跳转，防止进入死循环</h5>
-<pre v-highlight><code class="js">router.beforeEach((to, from, next) =&gt; {
+            <h5>检查是否登录后跳转，防止进入死循环</h5>
+            <pre v-highlight><code class="js">router.beforeEach((to, from, next) =&gt; {
     out //判断登录状态简单实例
     var userInfo = window.localStorage.getItem(&#39;token&#39;);
     if (userInfo) {
@@ -60,11 +61,11 @@ router.beforeEach((to, from, next) =&gt; {
     }
 })
 </code></pre>
-<h5>BrowserslistError: Unknown browser major</h5>
-<p>在 webpack 中引入使用 bootstrap
-引用 bootstrap.min.js 正常
-引用 bootstrap.min.css 报错</p>
-<pre v-highlight><code class="js">ERROR in ./node_modules/css-loader?minimize!./node_modules/autoprefixer-loader!./node_modules/bootstrap/dist/css/bootstrap.min.css
+            <h5>BrowserslistError: Unknown browser major</h5>
+            <p>在 webpack 中引入使用 bootstrap
+                引用 bootstrap.min.js 正常
+                引用 bootstrap.min.css 报错</p>
+            <pre v-highlight><code class="js">ERROR in ./node_modules/css-loader?minimize!./node_modules/autoprefixer-loader!./node_modules/bootstrap/dist/css/bootstrap.min.css
     Module build failed: BrowserslistError: Unknown browser major
         at error (E:\project\node_modules\browserslist\index.js:37:11)
         at Function.browserslist.checkName (E:\project\node_modules\browserslist\index.js:320:18)
@@ -82,28 +83,29 @@ router.beforeEach((to, from, next) =&gt; {
         at LazyResult.get (E:\project\node_modules\postcss\lib\lazy-result.js:334:25)
         at Object.module.exports (E:\project\node_modules\autoprefixer-loader\index.js:55:35)
 </code></pre>
-<p>解决方法：</p>
-<pre v-highlight><code class="js">// Edit node_modules\bootstrap\package.json: Remove these lines:
+            <p>解决方法：</p>
+            <pre v-highlight><code class="js">// Edit node_modules\bootstrap\package.json: Remove these lines:
 
 &quot;last 1 major version&quot;,
 &quot;&gt;= 1%&quot;,
 </code></pre>
-<h5>webpack-vue 使用font-awesome</h5>
-<p>npm 安装font-awesome 以及需要的所有依赖 </p>
-<pre v-highlight><code class="js">npm install less less-loader css-loader style-loader file-loader font-awesome --save
+            <h5>webpack-vue 使用font-awesome</h5>
+            <p>npm 安装font-awesome 以及需要的所有依赖 </p>
+            <pre v-highlight><code class="js">npm install less less-loader css-loader style-loader file-loader font-awesome --save
 </code></pre>
-<p>在入口文件中全局注册font-awesome</p>
-<pre v-highlight><code class="js">import &#39;font-awesome/css/font-awesome.min.css&#39;;
+            <p>在入口文件中全局注册font-awesome</p>
+            <pre v-highlight><code class="js">import &#39;font-awesome/css/font-awesome.min.css&#39;;
 </code></pre>
-<p>配置解析</p>
-<pre v-highlight><code class="js">{
+            <p>配置解析</p>
+            <pre v-highlight><code class="js">{
     test: /\.(gif|jpg|jpeg|png|woff|svg|eot|ttf)\??.*$/,
     loader: &#39;url-loader?limit=1024&#39;
 },
 </code></pre>
-<h5>iview导航栏组件，选中当前页面之后，点刷新或点击浏览器后退按钮后，导航栏选中的就消失了</h5>
-<pre v-highlight><code class="js">在vuex的 state 存储 active-name，根据路由用 computed 取出 active-name
+            <h5>iview导航栏组件，选中当前页面之后，点刷新或点击浏览器后退按钮后，导航栏选中的就消失了</h5>
+            <pre v-highlight><code class="js">在vuex的 state 存储 active-name，根据路由用 computed 取出 active-name
 </code></pre>
         </div>
+        <FooterDivider></FooterDivider>
     </BoWen>
 </template>

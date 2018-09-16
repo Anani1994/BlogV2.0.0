@@ -36,21 +36,28 @@ export default [
   //   component: () => import('../views/articles/frontend/AngularJS/angular-directive.vue')
   // },
   {
-    //时间做ID。 
     id: 20180915, 
     name: '问题收录集（1）',
     field: 'others',
     category: 'notes',
     tag: ['webpack','vue', 'JavaScript'],
     abstract: '收集整理开发路上遇到的各种问题。',
-    //发表时间
     postTime: '2018-09-15 01:23:38',
-    // articles + <field> + <category> + <englishName>
     path: '/articles/others/notes/note-02',
-    // 路径名称： englishName
     pathName: 'note-02',
-    // 文章组件位置，主要区别在于后两位: field + englishName
     component: () => import('../views/articles/others/notes/note-02.vue')
+  },
+  {
+    id: 20180916, 
+    name: '问题收录集（2）',
+    field: 'others',
+    category: 'notes',
+    tag: ['webpack','vue', 'JavaScript'],
+    abstract: '收集整理开发路上遇到的各种问题。',
+    postTime: '2018-09-16 08:23:38',
+    path: '/articles/others/notes/note-03',
+    pathName: 'note-03',
+    component: () => import('../views/articles/others/notes/note-03.vue')
   },
   {
     id: 20180909,
