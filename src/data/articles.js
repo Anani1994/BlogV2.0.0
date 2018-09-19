@@ -36,6 +36,18 @@ export default [
   //   component: () => import('../views/articles/frontend/AngularJS/angular-directive.vue')
   // },
   {
+    id: 20180918, 
+    name: 'Could not restore untracked files from stash',
+    field: 'others',
+    category: 'Git',
+    tag: ['Git', 'issue'],
+    abstract: '分析解决如题所示问题的原因和解决方法',
+    postTime: '2018-09-18 22:21:18',
+    path: '/articles/others/Git/issue-01',
+    pathName: 'issue-01',
+    component: () => import('../views/articles/others/Git/issue-01.vue')
+  },
+  {
     id: 20180915, 
     name: '问题收录集（1）',
     field: 'others',

@@ -43,6 +43,7 @@
                                 </template>
                                 <MenuItem name="OTH-1">笔记</MenuItem>
                                 <MenuItem name="OTH-2">杂烩</MenuItem>
+                                <MenuItem name="OTH-4">Git</MenuItem>
                                 <MenuItem name="OTH-3">样本演示</MenuItem>
                             </Submenu>
                         </Menu>
@@ -151,6 +152,8 @@
                     list = list.filter(item => item.category === 'notes');
                 } else if (this.activeName === 'OTH-2') {
                     list = list.filter(item => item.category === 'othMixed');
+                } else if (this.activeName === 'OTH-4') {
+                    list = list.filter(item => item.category === 'Git');
                 } else {
                     // this.activeName === 'OTH-3'
                     list = list.filter(item => item.category === 'demo');
