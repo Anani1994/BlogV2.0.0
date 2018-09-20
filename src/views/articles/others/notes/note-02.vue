@@ -1,12 +1,51 @@
 <template>
     <BoWen>
+        <div class="p-1" slot="catalog">
+            <Steps direction="vertical">
+                <Step
+                    title="隐藏滚动条且保持滚动"
+                    content="简单实现隐藏滚动条且保持滚动"
+                    status="wait"
+                    @click.native="toTop('#note-021', 30)">
+                </Step>
+                <Step
+                    title="error: pathspec 'field'' did not match any file(s) known to git."
+                    content="error: pathspec 'field'' did not match any file(s) known to git."
+                    @click.native="toTop('#note-022', 30)">
+                </Step>
+                <Step
+                    title="检查是否登录后跳转，防止进入死循环"
+                    content="Vue 项目中的路由问题"
+                    status="wait"
+                    @click.native="toTop('#note-023', 30)">
+                </Step>
+                <Step
+                    title="BrowserslistError: Unknown browser major"
+                    content="BrowserslistError: Unknown browser major"
+                    status="wait"
+                    @click.native="toTop('#note-024', 30)">
+                </Step>
+                <Step
+                    title="webpack-vue 使用 font-awesome"
+                    content="在 webpack-vue 如何使用 font-awesome"
+                    status="wait"
+                    @click.native="toTop('#note-025', 30)">
+                </Step>
+                <Step
+                    title="刷新后导航高亮失效"
+                    content="iview导航栏组件，选中当前页面之后，点刷新或点击浏览器后退按钮后，导航栏选中的就消失了"
+                    status="wait"
+                    @click.native="toTop('#note-026', 30)">
+                </Step>
+            </Steps>
+        </div>
         <div class="pt-3 text-center">
             <h1>
                 <Icon type="ios-book-outline" /> 问题收录集（1）</h1>
             <p class="pt-1">收集整理开发路上遇到的各种问题。</p>
         </div>
         <div class="markdown-content">
-            <h5>隐藏滚动条且保持滚动效果</h5>
+            <h5 id="note-021">隐藏滚动条且保持滚动效果</h5>
             <pre v-highlight><code class="CSS">.outer-container {
     overflow: hidden;        // 隐藏滚动条
     width: 240px;          // 内容宽度，同时配合子元素
@@ -27,14 +66,14 @@
     margin-right: -17px;
 }
 </code></pre>
-            <h5>error: pathspec &#39;field&#39;&#39; did not match any file(s) known to git.</h5>
+            <h5 id="note-022">error: pathspec &#39;field&#39;&#39; did not match any file(s) known to git.</h5>
             <pre v-highlight><code class="js">// 需要在提交时将描述信息放在两重引号中，原因疑是 git 无法识别 文件名或路径
 git add .
 git commit -m &quot;&#39;your message&#39;&quot;
 git pull origin master
 git push origin master
 </code></pre>
-            <h5>检查是否登录后跳转，防止进入死循环</h5>
+            <h5 id="note-023">检查是否登录后跳转，防止进入死循环</h5>
             <pre v-highlight><code class="js">router.beforeEach((to, from, next) =&gt; {
     out //判断登录状态简单实例
     var userInfo = window.localStorage.getItem(&#39;token&#39;);
@@ -61,7 +100,7 @@ router.beforeEach((to, from, next) =&gt; {
     }
 })
 </code></pre>
-            <h5>BrowserslistError: Unknown browser major</h5>
+            <h5 id="note-024">BrowserslistError: Unknown browser major</h5>
             <p>在 webpack 中引入使用 bootstrap
                 引用 bootstrap.min.js 正常
                 引用 bootstrap.min.css 报错</p>
@@ -89,7 +128,7 @@ router.beforeEach((to, from, next) =&gt; {
 &quot;last 1 major version&quot;,
 &quot;&gt;= 1%&quot;,
 </code></pre>
-            <h5>webpack-vue 使用font-awesome</h5>
+            <h5 id="note-025">webpack-vue 使用font-awesome</h5>
             <p>npm 安装font-awesome 以及需要的所有依赖 </p>
             <pre v-highlight><code class="js">npm install less less-loader css-loader style-loader file-loader font-awesome --save
 </code></pre>
@@ -102,10 +141,20 @@ router.beforeEach((to, from, next) =&gt; {
     loader: &#39;url-loader?limit=1024&#39;
 },
 </code></pre>
-            <h5>iview导航栏组件，选中当前页面之后，点刷新或点击浏览器后退按钮后，导航栏选中的就消失了</h5>
+            <h5 id="note-026">iview导航栏组件，选中当前页面之后，点刷新或点击浏览器后退按钮后，导航栏选中的就消失了</h5>
             <pre v-highlight><code class="js">在vuex的 state 存储 active-name，根据路由用 computed 取出 active-name
 </code></pre>
         </div>
         <FooterDivider></FooterDivider>
     </BoWen>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            toTop: this.$util.toTop
+        }
+    }
+}
+</script>

@@ -1,12 +1,46 @@
 <template>
     <BoWen>
+        <div class="p-1" slot="catalog">
+            <Steps direction="vertical">
+                <Step
+                    title="CSS 引用图片后找不到文件资源的问题"
+                    content="在 Vue 项目中 CSS 引用图片后找不到文件资源的问题"
+                    status="wait"
+                    @click.native="toTop('#note-031', 30)">
+                </Step>
+                <Step
+                    title="[vue/no-parsing-error] Parsing error: x-invalid-end-tag."
+                    content="[vue/no-parsing-error] Parsing error: x-invalid-end-tag."
+                    status="wait"
+                    @click.native="toTop('#note-032', 30)">
+                </Step>
+                <Step
+                    title="VS code 占用 cpu 过高"
+                    content="如何处理 VS code 占用 cpu 过高"
+                    status="wait"
+                    @click.native="toTop('#note-033', 30)">
+                </Step>
+                <Step
+                    title="球体链接"
+                    content="JS 实现球体链接"
+                    status="wait"
+                    @click.native="toTop('#note-034', 30)">
+                </Step>
+                <Step
+                    title="error: pathspec 'message' did not match any file(s) known to git."
+                    content="error: pathspec 'message' did not match any file(s) known to git."
+                    status="wait"
+                    @click.native="toTop('#note-035', 30)">
+                </Step>
+            </Steps>
+        </div>
         <div class="pt-3 text-center">
             <h1>
                 <Icon type="ios-book-outline" /> 问题收录集（2）</h1>
             <p class="pt-1">收集整理开发路上遇到的各种问题。</p>
         </div>
         <div class="markdown-content">
-            <h5>CSS 引用图片后找不到文件资源的问题</h5>
+            <h5 id="note-031">CSS 引用图片后找不到文件资源的问题</h5>
             <pre v-highlight><code class="js">// 显然在 webpack 4 下使用 mini-css-extract-plugin 插件分离 css 后，原先图片的相对引入路径在打包后的位置不再生效，
 // 因为 mini-css-extract-plugin 默认的 publicPath 是在 webpackOptions.output 下设置的，因此我们有时候需要在 rules 中配置合适的。
 // 配置后的 publicPath 会加载设置的图片处理后的输出路径的前面。
@@ -62,18 +96,18 @@ new MiniCssExtractPlugin({
       chunkFilename: &quot;[id].[hash].css&quot;
 }),
 </code></pre>
-            <h5>[vue/no-parsing-error] Parsing error:
+            <h5 id="note-032">[vue/no-parsing-error] Parsing error:
                 x-invalid-end-tag.</h5>
             <pre v-highlight><code class="js">// vetur 中 eslint 的问题，在 vscode 设置
 &quot;vetur.validation.template&quot;: false,
 </code></pre>
-            <h5>VS code 占用 cpu 过高</h5>
+            <h5 id="note-033">VS code 占用 cpu 过高</h5>
             <pre v-highlight><code class="js">// 在 VS code 设置
 // 控制是否在搜索中跟踪符号链接。
 // 修复编辑器内存占用过大的问题
 &quot;search.followSymlinks&quot;: false,
 </code></pre>
-            <h5>球体链接</h5>
+            <h5 id="note-034">球体链接</h5>
             <pre v-highlight><code class="html">&lt;!-- html --&gt;
 &lt;div class=&quot;link-ball-container&quot;&gt;
     &lt;div class=&quot;link-ball&quot;&gt;
@@ -244,7 +278,7 @@ linkBall.rotateY = (angleY,arr) =&gt; {
 // 然后再页面中通过以下启动，参数是一个包含半径和储存各链接的空间位置的对象
 linkBall.setLinkBall(parmas);
 </code></pre>
-            <h5>error: pathspec &#39;message&#39; did not match
+            <h5 id="note-035">error: pathspec &#39;message&#39; did not match
                 any file(s) known to git.</h5>
             <p>在 windows 系统使用 控制台提交(git commit -m &#39;message&#39;)报以上错误</p>
             <pre v-highlight><code class="js">// 改用 git bash提交
@@ -254,3 +288,13 @@ Git Bash，是git for windows自带的一组程序，提供了Linux风格的shel
         <FooterDivider></FooterDivider>
     </BoWen>
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            toTop: this.$util.toTop
+        }
+    }
+}
+</script>

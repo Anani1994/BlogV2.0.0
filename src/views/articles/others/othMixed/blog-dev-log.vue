@@ -23,6 +23,11 @@
                     content="记录一些重要的操作"
                     @click.native="toTop('#note-log', 30)">
                 </Step>
+                <Step
+                    title="分支开发"
+                    content="如何部署在 conding 和 GitHub"
+                    @click.native="toTop('#note-branch', 30)">
+                </Step>
             </Steps>
         </div>
         <div class="p-1">
@@ -45,9 +50,7 @@
             <h3 id="note-buged"><Icon type="logo-buffer" /> 解决的 BUG</h3>
             <Divider />
             <ul>
-                <li>
-                    从父路由点进子组件(（frontend 及其同级）下的组件)正常渲染，刷新页面后子组件内的内容直接消失，页面地址没变。
-                    <p>解决措施：修改子组件的路由中的 path 形如 articles/others/notes/note-00 => /articles/others/notes/note-00</p>
+                <li>从父路由点进子组件(（frontend 及其同级）下的组件)正常渲染，刷新页面后子组件内的内容直接消失，页面地址没变。解决措施：修改子组件的路由中的 path 形如： <pre class="ml-1">articles/others/notes/note-00 => /articles/others/notes/note-00</pre>
                 </li>
             </ul>
             <h3 id="note-log"><Icon type="logo-buffer" /> 操作日志</h3>
@@ -73,6 +76,13 @@ module.exports = {
 }</code></pre>
                 </li>
             </ul>
+            <h3 id="note-branch"><Icon type="logo-buffer" /> 分支开发</h3>
+            <Divider />
+            <p>由于在国内访问 <code>GitHub</code> 较慢，所以决定将博客同时部署在 <code>coding.net</code> 上，由此有了分支开发的工作。在发布到 <code>GitHub</code> 上的内容不包括已完成的一些项目，而部署在 <code>coding.net</code> 上的内容不包括旧的博客。也因在不同的网站上部署，所以在打包时需要有相应的改动，发布到 <code>GitHub</code> 只需要在原来的基础来检查 <code>.gitignore</code> 文件是否正确，发布到 <code>coding.net</code> 具体如下所示。</p>
+            <p><code>coding</code> 分支为部署 <code>coding.net</code> 诞生，当需要部署到其上时，首要需要切换到该分支。</p>
+            <p>其次切换分支后需要修改该对应的 .gitignore 文件，针对不同的部署对象修改其中的忽略的目录。</p>
+            <p><code>coding</code> 分支打包：<code>yarn run buildCoding</code></p>
+            <p>推送 <code>coding</code> 分支：<code>git push coding coding:master</code></p>
             <FooterDivider></FooterDivider>
         </div>
     </BoWen>
@@ -93,7 +103,7 @@ ul {
     list-style-position: inside;
     li {
         margin-left: 2rem;
+        margin-bottom: 1rem;
     }
 }
 </style>
-
