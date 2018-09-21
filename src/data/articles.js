@@ -120,6 +120,18 @@ export default [
     component: () => import('../views/articles/others/othMixed/blog-dev-log.vue')
   },
   {
+    id: 20180921,
+    name: '博客开发环境搭建',
+    field: 'others',
+    category: 'othMixed',
+    tag: ['blog', 'enviroment'],
+    abstract: '记录博客开发的基础环境的搭建',
+    postTime: '2018-09-21 00:12:37',
+    path: '/articles/others/othMixed/blog-dev-enviroment',
+    pathName: 'blog-dev-enviroment',
+    component: () => import('../views/articles/others/othMixed/blog-dev-enviroment.vue')
+  },
+  {
     id: 20180823,
     name: '搭建 webpack-angular 基础开发环境',
     field: 'frontend',
