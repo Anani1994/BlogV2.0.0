@@ -1,6 +1,33 @@
 export default [
   // 在此文件下写文章的相关信息，并在对应路径下创建文章的组件
-  // ..........................................................................................................................others/notes
+  {
+    //时间做ID。 
+    id: 20180922, 
+    //field.vue中table的名称及网页title。。
+    name: '组件开发测试页面',
+    //领域及路径
+    // backend
+    // frontend
+    // others
+    field: 'others）',
+    //分类  - field.vue及路径-所有类型：
+    // frontend：HTML, CSS, JS, VueJS, AngularJS, mixed
+    // backend： beMixed
+    // others：  demo, Git, notes, othMixed
+    category: 'othMixed',
+    //标签-暂未使用: 后期可做全局搜索
+    tag: ['template','vue'],
+    // 概要
+    abstract: '页面主要用于测试新增加的组件',
+    //发表时间
+    postTime: '2018-09-22 12:00:00',
+    // articles + <field> + <category> + <englishName>
+    path: '/articles/others/othMixed/test-temp',
+    // 路径名称： englishName
+    pathName: 'test-temp',
+    // 文章组件位置，主要区别在于后两位: field + englishName
+    component: () => import('../views/articles/others/othMixed/test-temp.vue')
+  },
   {
     //时间做ID。 
     id: 20180805, 
@@ -23,30 +50,7 @@ export default [
     // 文章组件位置，主要区别在于后两位: field + englishName
     component: () => import('../views/articles/frontend/VueJS/note-00.vue')
   },
-  // {
-  //   id: 20180826,
-  //   name: '浅析 angular 指令的作用域',
-  //   field: 'frontend',
-  //   category: 'AngularJS',
-  //   tag: ['JavaScript','angular','scope'],
-  //   abstract: '简单介绍 AngularJS 指令的使用。',
-  //   postTime: '2018-08-26 20:05:45',
-  //   path: '/articles/frontend/AngularJS/angular-directive',
-  //   pathName: 'angular-directive',
-  //   component: () => import('../views/articles/frontend/AngularJS/angular-directive.vue')
-  // },
-  {
-    id: 20180918, 
-    name: 'Could not restore untracked files from stash',
-    field: 'others',
-    category: 'Git',
-    tag: ['Git', 'issue'],
-    abstract: '分析解决如题所示问题的原因和解决方法',
-    postTime: '2018-09-18 22:21:18',
-    path: '/articles/others/Git/issue-01',
-    pathName: 'issue-01',
-    component: () => import('../views/articles/others/Git/issue-01.vue')
-  },
+  // ..........................................................................................................................others/notes
   {
     id: 20180915, 
     name: '问题收录集（1）',
@@ -71,42 +75,20 @@ export default [
     pathName: 'note-03',
     component: () => import('../views/articles/others/notes/note-03.vue')
   },
+  // ..........................................................................................................................others/Git
   {
-    id: 20180909,
-    name: '伪元素 ::before 和 ::after',
-    field: 'frontend',
-    category: 'CSS',
-    tag: ['CSS','伪类'],
-    abstract: 'CSS伪元素是用来添加一些选择器的特殊效果。',
-    postTime: '2018-09-09 12:34:33',
-    path: '/articles/frontend/CSS/pseudo-before-after',
-    pathName: 'pseudo-before-after',
-    component: () => import('../views/articles/frontend/CSS/pseudo-before-after.vue')
+    id: 20180918, 
+    name: 'Could not restore untracked files from stash',
+    field: 'others',
+    category: 'Git',
+    tag: ['Git', 'issue'],
+    abstract: '分析解决如题所示问题的原因和解决方法',
+    postTime: '2018-09-18 22:21:18',
+    path: '/articles/others/Git/issue-01',
+    pathName: 'issue-01',
+    component: () => import('../views/articles/others/Git/issue-01.vue')
   },
-  {
-    id: 20180805,
-    name: 'windows 搭建开发环境之安装使用 Cmder',
-    field: 'frontend',
-    category: 'mixed',
-    tag: ['windows','Cmder'],
-    abstract: 'Cmder可以说是 Windows 下一款非常好用的 cmd 替代品，它不仅好用，而且功能强大，界面美观，非常适合在 Windows 下进行开发时使用。',
-    postTime: '2018-08-25 20:11:47',
-    path: '/articles/frontend/mixed/note-01-cmder',
-    pathName: 'note-01-cmder',
-    component: () => import('../views/articles/frontend/mixed/note-01-cmder.vue')
-  },
-  {
-    id: 20180806,
-    name: '详解 offsetTop、scrollTop 等DOM属性',
-    field: 'frontend',
-    category: 'JS',
-    tag: ['JavaScript','jQuery'],
-    abstract: '详细分析 offsetTop、offsetLeft、offsetWidth、offsetHeight、scrollTop... 以及 clientTop...等 DOM 属性的值。',
-    postTime: '2018-08-06 20:21:15',
-    path: '/articles/frontend/JS/top-left-width-height',
-    pathName: 'top-left-width-height',
-    component: () => import('../views/articles/frontend/JS/top-left-width-height.vue')
-  },
+  // ..........................................................................................................................others/othMixed
   {
     id: 20180807,
     name: '博客开发记录',
@@ -131,19 +113,19 @@ export default [
     pathName: 'blog-dev-enviroment',
     component: () => import('../views/articles/others/othMixed/blog-dev-enviroment.vue')
   },
-  {
-    id: 20180823,
-    name: '搭建 webpack-angular 基础开发环境',
-    field: 'frontend',
-    category: 'AngularJS',
-    tag: ['webpack','angular','JavaScript','jQuery'],
-    abstract: '由于公司的项目主要使用 AngularJS，所以准备搭建一个基本的开发环境，以便更好的学习和调试组件等。',
-    postTime: '2018-08-23 23:33:38',
-    path: '/articles/frontend/AngularJS/angular-dev',
-    pathName: 'angular-dev',
-    component: () => import('../views/articles/frontend/AngularJS/angular-dev.vue')
-  },
   // ...........................................................................................................................frontend/JS
+  {
+    id: 20180806,
+    name: '详解 offsetTop、scrollTop 等DOM属性',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript','jQuery'],
+    abstract: '详细分析 offsetTop、offsetLeft、offsetWidth、offsetHeight、scrollTop... 以及 clientTop...等 DOM 属性的值。',
+    postTime: '2018-08-06 20:21:15',
+    path: '/articles/frontend/JS/top-left-width-height',
+    pathName: 'top-left-width-height',
+    component: () => import('../views/articles/frontend/JS/top-left-width-height.vue')
+  },
   {
     id: 20180809,
     name: 'JavaScript 手动触发事件',
@@ -180,6 +162,31 @@ export default [
     pathName: 'throttle-debounce',
     component: () => import('../views/articles/frontend/JS/throttle-debounce.vue')
   },
+  // ..........................................................................................................................frontend/AngularJS
+  {
+    id: 20180922,
+    name: 'AngularJS 的使用笔记',
+    field: 'frontend',
+    category: 'AngularJS',
+    tag: ['JavaScript','angular','scope'],
+    abstract: '记录工作中的学习中遇到的重点。',
+    postTime: '2018-09-22 00:05:45',
+    path: '/articles/frontend/AngularJS/angular-notes',
+    pathName: 'angular-notes',
+    component: () => import('../views/articles/frontend/AngularJS/angular-notes.vue')
+  },
+  {
+    id: 20180823,
+    name: '搭建 webpack-angular 基础开发环境',
+    field: 'frontend',
+    category: 'AngularJS',
+    tag: ['webpack','angular','JavaScript','jQuery'],
+    abstract: '由于公司的项目主要使用 AngularJS，所以准备搭建一个基本的开发环境，以便更好的学习和调试组件等。',
+    postTime: '2018-08-23 23:33:38',
+    path: '/articles/frontend/AngularJS/angular-dev',
+    pathName: 'angular-dev',
+    component: () => import('../views/articles/frontend/AngularJS/angular-dev.vue')
+  },
   // ..........................................................................................................................frontend/CSS
   {
     id: 20180811,
@@ -205,4 +212,29 @@ export default [
     pathName: 'margin-collapsing',
     component: () => import('../views/articles/frontend/CSS/margin-collapsing.vue')
   },
+  {
+    id: 20180909,
+    name: '伪元素 ::before 和 ::after',
+    field: 'frontend',
+    category: 'CSS',
+    tag: ['CSS','伪类'],
+    abstract: 'CSS伪元素是用来添加一些选择器的特殊效果。',
+    postTime: '2018-09-09 12:34:33',
+    path: '/articles/frontend/CSS/pseudo-before-after',
+    pathName: 'pseudo-before-after',
+    component: () => import('../views/articles/frontend/CSS/pseudo-before-after.vue')
+  },
+  // ..........................................................................................................................frontend/mixed
+  {
+    id: 20180805,
+    name: 'windows 搭建开发环境之安装使用 Cmder',
+    field: 'frontend',
+    category: 'mixed',
+    tag: ['windows','Cmder'],
+    abstract: 'Cmder可以说是 Windows 下一款非常好用的 cmd 替代品，它不仅好用，而且功能强大，界面美观，非常适合在 Windows 下进行开发时使用。',
+    postTime: '2018-08-25 20:11:47',
+    path: '/articles/frontend/mixed/note-01-cmder',
+    pathName: 'note-01-cmder',
+    component: () => import('../views/articles/frontend/mixed/note-01-cmder.vue')
+  }
 ]
