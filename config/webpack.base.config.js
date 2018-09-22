@@ -33,6 +33,14 @@ module.exports = {
         ]
       },
       {
+        test: /\.pug$/,
+        use: [
+          {
+            loader: 'pug-plain-loader'
+          }
+        ]
+      },
+      {
         test: /\.css$/,
         use: [
           // {

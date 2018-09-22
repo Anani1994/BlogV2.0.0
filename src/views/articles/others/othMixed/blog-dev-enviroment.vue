@@ -236,6 +236,15 @@ $ yarn add -D babel-plugin-syntax-dynamic-import
   }
   ]
 },</code></pre>
+            <h4 id="blog-dev-03a" class="m-1"><Icon type="logo-buffer" /> 使用 pug 高效开发</h4>
+            <pre v-highlight><code class="js">// 安装依赖
+yarn add -D pug pug-plain-loader
+
+// webpack.base.config.js -> module.rules
+{
+  test: /\.pug$/,
+  loader: 'pug-plain-loader'
+}</code></pre>
             <FooterDivider></FooterDivider>
         </div>
     </BoWen>
