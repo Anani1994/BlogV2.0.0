@@ -1,4 +1,5 @@
 import articlesInfo from '../data/articles';
+import gitCommandInfo from '../data/git-command';
 
 export const indexPage = {
   path: '/',
@@ -38,9 +39,23 @@ articlesInfo.forEach((cur) => {
   articlesPage.push(pathObj);
 });
 
+let gitCommandPage = [];
+gitCommandInfo.forEach((cur) => {
+  let pathObj = {
+    path: cur.path,
+    name: cur.pathName,
+    meta: {
+      title: cur.name
+    },
+    component: cur.component
+  };
+  gitCommandPage.push(pathObj);
+});
+
 export const routers = [
   indexPage,
   fieldPage,
   testRouter,
-  ...articlesPage
+  ...articlesPage,
+  ...gitCommandPage
 ];

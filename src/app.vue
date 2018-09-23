@@ -37,6 +37,27 @@
       </MenuItem>
     </Menu>
     <router-view></router-view>
+    <template v-if="showSearch">
+      <div class="search-container">
+        <div class="search-content">
+          <Input
+            size="large"
+            clearable
+            search
+            v-model="searchValue">
+            <Select v-model="searchType" slot="prepend" style="width: 100px">
+              <Option value="git">Git 命令</Option>
+              <Option value="dos">终端命令</Option>
+            </Select>
+          </Input>
+          <ul class="mt-1">
+            <li v-for="item in filteredGitCommandsInfo" :key="item.id">
+              <pre class="custom-pre" @click="searchToPage(item.pathName)">{{item.command}}</pre> {{item.title}}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </template>
     <div class="bottom">
       Created in 2018<span class="border-right">
       </span>网站开发者：<a class="text-white" href="">码良</a>
@@ -47,12 +68,22 @@
 </template>
 
 <script>
+import gitCommandsInfo from './data/git-command.js';
 import util from './libs/util.js';
 export default {
   data() {
     return {
       toPage: util.toPage,
-      window
+      window,
+      showSearch: false,
+      searchValue: '',
+      searchType: 'git'
+    }
+  },
+  methods: {
+    searchToPage(arg) {
+      this.toPage(arg);
+      this.showSearch = false;
     }
   },
   computed: {
@@ -61,6 +92,9 @@ export default {
     },
     allBgColor() {
       return this.$store.state.allBgColor;
+    },
+    filteredGitCommandsInfo() {
+      return gitCommandsInfo;
     }
   },
   mounted() {
@@ -76,6 +110,20 @@ export default {
     } else {
       if (localStorage.defaultBgColor !== '') {
         this.$store.commit('setBgColor','rgba(35,36,31,.8)');
+      }
+    }
+  },
+  created() {
+    document.onkeyup = (event) => {
+      if (event.ctrlKey && 32 === event.keyCode) {
+        if (!this.showSearch) {
+          this.showSearch = !this.showSearch;
+        }
+      }
+      if (27 === event.keyCode) {
+        if (this.showSearch) {
+          this.showSearch = !this.showSearch;
+        }
       }
     }
   }
@@ -111,6 +159,28 @@ html,body {
     margin: 0 1rem;
     height: 2rem;
     border-right: 1px solid #fff;
+  }
+  .search-container {
+    z-index: 9999;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+  }
+  .search-content {
+    width: 50%;
+    margin: 60px auto 10px;
+    li {
+      margin-bottom: 5px;
+      list-style-type: none;
+      &:hover {
+        background-color: #606060;
+      }
+      pre:hover {
+        cursor: pointer;
+      }
+    }
   }
 }
 </style>
