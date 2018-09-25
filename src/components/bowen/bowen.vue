@@ -122,6 +122,7 @@ export default {
             color: #000;
         }
         p {
+            margin-bottom: 1rem;
             text-indent: 2rem;
         }
     }
