@@ -115,6 +115,18 @@ export default [
   },
   // ...........................................................................................................................frontend/JS
   {
+    id: 20180925,
+    name: 'JS-简介',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: '介绍 JavaScript 的基本概念。',
+    postTime: '2018-09-25 23:04:32',
+    path: '/articles/frontend/JS/JS-01',
+    pathName: 'JS-01',
+    component: () => import('../views/articles/frontend/JS/JS-01.vue')
+  },
+  {
     id: 20180806,
     name: '详解 offsetTop、scrollTop 等DOM属性',
     field: 'frontend',
