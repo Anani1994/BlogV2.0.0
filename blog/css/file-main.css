@@ -40,16 +40,30 @@ body {
 }
 .app-container .search-content {
   width: 50%;
-  margin: 60px auto 10px;
+  height: 100%;
+  margin: 90px auto 0;
 }
-.app-container .search-content li {
+.app-container .search-content .search-result-container {
+  overflow: hidden;
+  padding-top: 15px;
+  width: 100%;
+  height: calc(100% - 157px);
+}
+.app-container .search-content .search-result-container .search-result {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: calc(100% + 17px);
+  height: 100%;
+}
+.app-container .search-content .search-result-container .search-result li {
+  overflow-x: auto;
   margin-bottom: 5px;
   list-style-type: none;
 }
-.app-container .search-content li:hover {
-  background-color: #606060;
+.app-container .search-content .search-result-container .search-result li:hover {
+  background-color: #030303;
 }
-.app-container .search-content li pre:hover {
+.app-container .search-content .search-result-container .search-result li pre:hover {
   cursor: pointer;
 }
 
