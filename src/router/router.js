@@ -1,5 +1,8 @@
 import articlesInfo from '../data/articles';
 import gitCommandInfo from '../data/git-command';
+import dosCommandInfo from '../data/dos-command';
+import vimCommandInfo from '../data/vim-command';
+import linuxCommandInfo from '../data/linux-command';
 
 export const indexPage = {
   path: '/',
@@ -52,10 +55,52 @@ gitCommandInfo.forEach((cur) => {
   gitCommandPage.push(pathObj);
 });
 
+let linuxCommandPage = [];
+linuxCommandInfo.forEach((cur) => {
+  let pathObj = {
+    path: cur.path,
+    name: cur.pathName,
+    meta: {
+      title: cur.name
+    },
+    component: cur.component
+  };
+  linuxCommandPage.push(pathObj);
+});
+
+let dosCommandPage = [];
+dosCommandInfo.forEach((cur) => {
+  let pathObj = {
+    path: cur.path,
+    name: cur.pathName,
+    meta: {
+      title: cur.name
+    },
+    component: cur.component
+  };
+  dosCommandPage.push(pathObj);
+});
+
+let vimCommandPage = [];
+vimCommandInfo.forEach((cur) => {
+  let pathObj = {
+    path: cur.path,
+    name: cur.pathName,
+    meta: {
+      title: cur.name
+    },
+    component: cur.component
+  };
+  vimCommandPage.push(pathObj);
+});
+
 export const routers = [
   indexPage,
   fieldPage,
   testRouter,
   ...articlesPage,
-  ...gitCommandPage
+  ...gitCommandPage,
+  ...dosCommandPage,
+  ...vimCommandPage,
+  ...linuxCommandPage
 ];

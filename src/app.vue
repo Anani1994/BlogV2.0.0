@@ -43,18 +43,21 @@
           <Input
             size="large"
             clearable
-            search
             v-model="searchValue">
             <Select v-model="searchType" slot="prepend" style="width: 100px">
               <Option value="git">Git 命令</Option>
-              <Option value="dos">终端命令</Option>
+              <Option value="dos">Dos 命令</Option>
+              <Option value="vim">Vim 命令</Option>
+              <Option value="linux">Linux 命令</Option>
             </Select>
           </Input>
-          <ul class="mt-1">
-            <li v-for="item in filteredGitCommandsInfo" :key="item.id">
-              <pre class="custom-pre" @click="searchToPage(item.pathName)">{{item.command}}</pre> {{item.title}}
-            </li>
-          </ul>
+          <div class="search-result-container">
+            <ul class="search-result">
+              <li v-for="item in filteredGitCommandsInfo" :key="item.id">
+                <pre class="custom-pre" @click="searchToPage(item.pathName)">{{item.command}}</pre> {{item.title}}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </template>
@@ -69,6 +72,9 @@
 
 <script>
 import gitCommandsInfo from './data/git-command.js';
+import dosCommandsInfo from './data/dos-command.js';
+import linuxCommandsInfo from './data/linux-command.js';
+import vimCommandsInfo from './data/vim-command.js';
 import util from './libs/util.js';
 export default {
   data() {
@@ -84,6 +90,23 @@ export default {
     searchToPage(arg) {
       this.toPage(arg);
       this.showSearch = false;
+    },
+    filterData(str, arr) {
+      let result = arr;
+      let data = [];
+      let filterArr = str.split(" ");
+      result.forEach((item1) => {
+        let titleContinue = filterArr.every((item2) => {
+          return item1.title.includes(item2);
+        });
+        let commandContinue = filterArr.every((item2) => {
+          return item1.command.includes(item2);
+        });
+        if (titleContinue || commandContinue) {
+          data.push(item1);
+        }
+      });
+      return data;
     }
   },
   computed: {
@@ -94,7 +117,17 @@ export default {
       return this.$store.state.allBgColor;
     },
     filteredGitCommandsInfo() {
-      return gitCommandsInfo;
+      let data = '';
+      if (this.searchType === 'git') {
+        data = this.filterData(this.searchValue, gitCommandsInfo);
+      } else if (this.searchType === 'dos') {
+        data = this.filterData(this.searchValue, dosCommandsInfo);
+      } else if (this.searchType === 'vim') {
+        data = this.filterData(this.searchValue, vimCommandsInfo);
+      } else {
+        data = this.filterData(this.searchValue, linuxCommandsInfo);
+      }
+      return data;
     }
   },
   mounted() {
@@ -170,15 +203,29 @@ html,body {
   }
   .search-content {
     width: 50%;
-    margin: 60px auto 10px;
-    li {
-      margin-bottom: 5px;
-      list-style-type: none;
-      &:hover {
-        background-color: #606060;
-      }
-      pre:hover {
-        cursor: pointer;
+    height: 100%;
+    margin: 90px auto 0;
+    .search-result-container {
+        overflow: hidden;
+        padding-top: 15px;
+        width: 100%;
+        height: calc(100% - 157px);
+      .search-result {
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: calc(100% + 17px);
+        height: 100%;
+        li {
+          overflow-x: auto;
+          margin-bottom: 5px;
+          list-style-type: none;
+          &:hover {
+            background-color: #030303;
+          }
+          pre:hover {
+            cursor: pointer;
+          }
+        }
       }
     }
   }
