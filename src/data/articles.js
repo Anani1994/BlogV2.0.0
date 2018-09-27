@@ -115,6 +115,18 @@ export default [
   },
   // ...........................................................................................................................frontend/JS
   {
+    id: 20180926,
+    name: 'JS-数据类型',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: '介绍 JavaScript 的基本数据类型。',
+    postTime: '2018-09-26 22:28:06',
+    path: '/articles/frontend/JS/JS-02',
+    pathName: 'JS-02',
+    component: () => import('../views/articles/frontend/JS/JS-02.vue')
+  },
+  {
     id: 20180925,
     name: 'JS-简介',
     field: 'frontend',

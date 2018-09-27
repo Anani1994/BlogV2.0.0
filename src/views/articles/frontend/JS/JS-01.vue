@@ -97,6 +97,7 @@ console.log(message); // Hello world</code></pre>
             <pre class="ml-2" v-highlight><code class="js">var message = "Hello world"; // string 类型
 message = 99;                // number 类型</code></pre>
             <p>ECMA-262 描述了一组具有特定用途得关键字，关键字是语言保留得，不能用作标识符。</p>
+            <p class="text-right">参考资料：JavaScript 高级程序设计（第三版）</p>
             <FooterDivider></FooterDivider>
         </div>
     </BoWen>
