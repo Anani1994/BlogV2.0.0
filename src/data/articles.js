@@ -115,8 +115,20 @@ export default [
   },
   // ...........................................................................................................................frontend/JS
   {
+    id: 20180930,
+    name: 'RequireJS (一)',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript', 'RequireJS'],
+    abstract: '非常小巧的 JavaScript 模块载入框架',
+    postTime: '2018-09-30 22:18:35',
+    path: '/articles/frontend/JS/RequireJS',
+    pathName: 'RequireJS',
+    component: () => import('../views/articles/frontend/JS/RequireJS.vue')
+  },
+  {
     id: 20180927,
-    name: 'JS-操作符',
+    name: 'JS-操作符 (一)',
     field: 'frontend',
     category: 'JS',
     tag: ['JavaScript'],

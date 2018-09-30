@@ -22,7 +22,7 @@
         </div>
         <div class="px-1">
             <div class="py-3 text-center">
-                <h1><Icon type="ios-book-outline" /> JS-操作符(一)</h1>
+                <h1><Icon type="ios-book-outline" /> JS-操作符 (一)</h1>
                 <p class="pt-1">介绍 JavaScript 的基本操作符</p>
             </div>
             <h3 id="JS-03-1" class="ml-1"><Icon type="logo-buffer" /> 一元操作符</h3>
