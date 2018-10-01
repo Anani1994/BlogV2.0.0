@@ -31,7 +31,7 @@
                         | &lt;!DOCTYPE html&gt;
                         | &lt;html&gt;
                         |     &lt;head&gt;
-                        |         &lt;script type="text/javascript" src="say.hello.js"&gt;&lt;/script&gt;
+                        |         &lt;script type="text/javascript" src="js/say.hello.js"&gt;&lt;/script&gt;
                         |     &lt;/head&gt;
                         |     &lt;body&gt;
                         |         &lt;div&gt;Hello world&lt;/div&gt;
@@ -69,7 +69,7 @@
                         |     &lt;head&gt;
                         |         &lt;script type="text/javascript" src="js/require.js" defer async="true"&gt;&lt;/script&gt;
                         |         &lt;script type="text/javascript"&gt;
-                        |             require(["say.hello"]);
+                        |             require(["js/say.hello"]);
                         |         &lt;/script&gt;
                         |     &lt;/head&gt;
                         |     &lt;body&gt;
@@ -90,6 +90,9 @@
             ul.ml-2
                 li.ml-1 使用程序调用的方式加载 js，防出页面一排 script 标签引入外部 js 的情况发生。
                 li.ml-1 防止js加载阻塞页面渲染。
+            p.text-right 还没有看过？点击 
+                a(href="/#/articles/frontend/JS/RequireJS-1") RequireJS (二) 
+                | 查看更多内容。
             p.text-right 参考资料：
                 a.mr-1(href="http://www.runoob.com/w3cnote/requirejs-tutorial-1.html") 菜鸟教程
                 a.mr-1(href="https://www.ibm.com/developerworks/cn/web/1209_shiwei_requirejs/index.html") IBM
