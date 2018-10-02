@@ -14,7 +14,7 @@
             .py-3.text-center
                 h1
                     Icon(type="ios-book-outline")
-                    | &nbsp;RequireJS (三)
+                    | &nbsp;RequireJS (四)
                 p.pt-1 RequireJS 实现 jsonp 服务
             h3#RequireJS-3-1.ml-1
                 Icon(type="logo-buffer")
