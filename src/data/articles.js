@@ -29,25 +29,15 @@ export default [
     component: () => import('../views/articles/others/othMixed/test-temp.vue')
   },
   {
-    //时间做ID。 
     id: 20180805, 
-    //field.vue中table的名称及网页title。。
     name: 'Vue 注册全局组件和函数',
-    //领域及路径-（所有类型：backend,frontend,others）
     field: 'frontend',
-    //分类  - field.vue及路径-(所有类型：HTML,CSS,JS,VueJS,AngularJS,mixed;beMixed;demo,notes,othMixed)
     category: 'VueJS',
-    //标签-暂未使用: 后期可做全局搜索
     tag: ['webpack','vue'],
-    // 概要
     abstract: '如何让函数全局可用？ & 如何全局注册组件？',
-    //发表时间
     postTime: '2018-08-05 18:41:35',
-    // articles + <field> + <category> + <englishName>
     path: '/articles/frontend/VueJS/note-00',
-    // 路径名称： englishName
     pathName: 'note-00',
-    // 文章组件位置，主要区别在于后两位: field + englishName
     component: () => import('../views/articles/frontend/VueJS/note-00.vue')
   },
   // ..........................................................................................................................others/notes
@@ -82,7 +72,7 @@ export default [
     field: 'others',
     category: 'Git',
     tag: ['Git', 'issue'],
-    abstract: '分析解决如题所示问题的原因和解决方法',
+    abstract: '分析解决如题所示问题的原因和解决方法。',
     postTime: '2018-09-18 22:21:18',
     path: '/articles/others/Git/issue-01',
     pathName: 'issue-01',
@@ -107,13 +97,25 @@ export default [
     field: 'others',
     category: 'othMixed',
     tag: ['blog', 'enviroment'],
-    abstract: '记录博客开发的基础环境的搭建',
+    abstract: '记录博客开发的基础环境的搭建。',
     postTime: '2018-09-21 00:12:37',
     path: '/articles/others/othMixed/blog-dev-enviroment',
     pathName: 'blog-dev-enviroment',
     component: () => import('../views/articles/others/othMixed/blog-dev-enviroment.vue')
   },
   // ...........................................................................................................................frontend/JS
+  {
+    id: 20181003,
+    name: 'RequireJS (四)',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript', 'RequireJS'],
+    abstract: 'RequireJS 实现 jsonp 服务。',
+    postTime: '2018-10-03 18:59:34',
+    path: '/articles/frontend/JS/RequireJS-3',
+    pathName: 'RequireJS-3',
+    component: () => import('../views/articles/frontend/JS/RequireJS-3.vue')
+  },
   {
     id: 20181002,
     name: 'RequireJS (三)',
@@ -144,7 +146,7 @@ export default [
     field: 'frontend',
     category: 'JS',
     tag: ['JavaScript', 'RequireJS'],
-    abstract: '非常小巧的 JavaScript 模块载入框架',
+    abstract: '非常小巧的 JavaScript 模块载入框架。',
     postTime: '2018-09-30 22:18:35',
     path: '/articles/frontend/JS/RequireJS',
     pathName: 'RequireJS',
