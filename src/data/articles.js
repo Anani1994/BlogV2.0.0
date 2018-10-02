@@ -115,6 +115,18 @@ export default [
   },
   // ...........................................................................................................................frontend/JS
   {
+    id: 20181002,
+    name: 'RequireJS (三)',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript', 'RequireJS'],
+    abstract: 'RequireJS 的基本配置。',
+    postTime: '2018-10-02 16:44:23',
+    path: '/articles/frontend/JS/RequireJS-2',
+    pathName: 'RequireJS-2',
+    component: () => import('../views/articles/frontend/JS/RequireJS-2.vue')
+  },
+  {
     id: 20181001,
     name: 'RequireJS (二)',
     field: 'frontend',
