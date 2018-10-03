@@ -115,8 +115,20 @@ export default [
   },
   // ...........................................................................................................................frontend/JS
   {
+    id: 20180929,
+    name: 'JS-操作符 (二)',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: '乘性操作符、加性操作符、关系操作符、相等操作符、条件操作符、赋值操作符、逗号操作符。',
+    postTime: '2018-09-28 23:05:34',
+    path: '/articles/frontend/JS/JS-04',
+    pathName: 'JS-04',
+    component: () => import('../views/articles/frontend/JS/JS-04.vue')
+  },
+  {
     id: 20180927,
-    name: 'JS-操作符',
+    name: 'JS-操作符（一）',
     field: 'frontend',
     category: 'JS',
     tag: ['JavaScript'],
