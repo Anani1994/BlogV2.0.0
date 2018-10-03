@@ -154,7 +154,7 @@ export default [
   },
   {
     id: 20180929,
-    name: 'JS-操作符 (二)',
+    name: 'JS-操作符（二）',
     field: 'frontend',
     category: 'JS',
     tag: ['JavaScript'],
