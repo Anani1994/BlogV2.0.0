@@ -175,6 +175,7 @@
             p 每个 case 的值不一定是常量，可以是变量，甚至是表达式。
             p.text-success switch 语句在比较值时使用的是全等操作符，因此不会发生类型转换。
             p.text-right 参考资料：JavaScript 高级程序设计（第三版）
+            <FooterDivider></FooterDivider>
 </template>
 
 <script>
