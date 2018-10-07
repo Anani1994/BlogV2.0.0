@@ -105,6 +105,18 @@ export default [
   },
   // ...........................................................................................................................frontend/JS
   {
+    id: 20181007,
+    name: 'ES6-变量申明',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript', 'ES6'],
+    abstract: 'ES6 中新增了 let 和 const 命令，用于申明变量',
+    postTime: '2018-10-07 18:52:46',
+    path: '/articles/frontend/JS/ES6-0',
+    pathName: 'ES6-0',
+    component: () => import('../views/articles/frontend/JS/ES6-0.vue')
+  },
+  {
     id: 20181003,
     name: 'RequireJS (四)',
     field: 'frontend',
