@@ -165,6 +165,18 @@ export default [
     component: () => import('../views/articles/frontend/JS/RequireJS.vue')
   },
   {
+    id: 20181007,
+    name: 'JS-语句',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: '语句定义了 ECMAScript 中的主要语法，语句通常使用一或多个关键字来完成给定任务。',
+    postTime: '2018-10-07 20:32:26',
+    path: '/articles/frontend/JS/JS-05',
+    pathName: 'JS-05',
+    component: () => import('../views/articles/frontend/JS/JS-05.vue')
+  },
+  {
     id: 20180929,
     name: 'JS-操作符（二）',
     field: 'frontend',
