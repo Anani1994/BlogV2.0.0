@@ -165,6 +165,18 @@ export default [
     component: () => import('../views/articles/frontend/JS/RequireJS.vue')
   },
   {
+    id: 20181009,
+    name: 'JS-基本类型和引用类型的值',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: 'ECMAScript变量可能包含两种不同数据类型的值：基本类型值和引用类型值。',
+    postTime: '2018-10-09 21:22:36',
+    path: '/articles/frontend/JS/JS-07',
+    pathName: 'JS-07',
+    component: () => import('../views/articles/frontend/JS/JS-07.vue')
+  },
+  {
     id: 20181008,
     name: 'JS-函数',
     field: 'frontend',
