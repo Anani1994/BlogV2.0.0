@@ -298,6 +298,18 @@ export default [
   },
   // ..........................................................................................................................frontend/AngularJS
   {
+    id: 20181010,
+    name: 'AngularJS 获取 radio 选中的值',
+    field: 'frontend',
+    category: 'AngularJS',
+    tag: ['JavaScript','angular', 'radio'],
+    abstract: 'AngularJS 获取 实时获取被选中的 radio 的值。',
+    postTime: '2018-10-10 22:29:52',
+    path: '/articles/frontend/AngularJS/angular-radio',
+    pathName: 'angular-radio',
+    component: () => import('../views/articles/frontend/AngularJS/angular-radio.vue')
+  },
+  {
     id: 20180922,
     name: 'AngularJS 的使用笔记',
     field: 'frontend',
