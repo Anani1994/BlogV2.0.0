@@ -165,6 +165,18 @@ export default [
     component: () => import('../views/articles/frontend/JS/RequireJS.vue')
   },
   {
+    id: 20181008,
+    name: 'JS-函数',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: '通过函数可以封装任意多条语句，而且可以在任何地方、任何时候调用执行。',
+    postTime: '2018-10-08 21:48:33',
+    path: '/articles/frontend/JS/JS-06',
+    pathName: 'JS-06',
+    component: () => import('../views/articles/frontend/JS/JS-06.vue')
+  },
+  {
     id: 20181007,
     name: 'JS-语句',
     field: 'frontend',
