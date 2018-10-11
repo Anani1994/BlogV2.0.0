@@ -165,6 +165,18 @@ export default [
     component: () => import('../views/articles/frontend/JS/RequireJS.vue')
   },
   {
+    id: 20181012,
+    name: 'JS-Object 类型',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: 'ECMAScript 中的引用类型。',
+    postTime: '2018-10-11 23:01:12',
+    path: '/articles/frontend/JS/JS-10',
+    pathName: 'JS-10',
+    component: () => import('../views/articles/frontend/JS/JS-10.vue')
+  },
+  {
     id: 20181011,
     name: 'JS-垃圾收集',
     field: 'frontend',
@@ -194,7 +206,7 @@ export default [
     field: 'frontend',
     category: 'JS',
     tag: ['JavaScript'],
-    abstract: 'ECMAScript变量可能包含两种不同数据类型的值：基本类型值和引用类型值。',
+    abstract: 'ECMAScript 变量可能包含两种不同数据类型的值：基本类型值和引用类型值。',
     postTime: '2018-10-09 21:22:36',
     path: '/articles/frontend/JS/JS-07',
     pathName: 'JS-07',
