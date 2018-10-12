@@ -165,6 +165,18 @@ export default [
     component: () => import('../views/articles/frontend/JS/RequireJS.vue')
   },
   {
+    id: 20181013,
+    name: 'JS-Array 类型',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: 'ECMAScript 数组与其他语言中的数组都是 数据的有序列表。',
+    postTime: '2018-10-12 21:20:56',
+    path: '/articles/frontend/JS/JS-11',
+    pathName: 'JS-11',
+    component: () => import('../views/articles/frontend/JS/JS-11.vue')
+  },
+  {
     id: 20181012,
     name: 'JS-Object 类型',
     field: 'frontend',
