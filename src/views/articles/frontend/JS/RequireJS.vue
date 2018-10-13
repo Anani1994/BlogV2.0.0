@@ -90,7 +90,7 @@
             ul.ml-2
                 li.ml-1 使用程序调用的方式加载 js，防出页面一排 script 标签引入外部 js 的情况发生。
                 li.ml-1 防止js加载阻塞页面渲染。
-            p.text-right 还没有看过？点击 
+            p.text-right 还没有看够？点击 
                 a(href="/#/articles/frontend/JS/RequireJS-1") RequireJS (二) 
                 | 查看更多内容。
             p.text-right 参考资料：
