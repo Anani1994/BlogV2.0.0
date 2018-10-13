@@ -165,6 +165,18 @@ export default [
     component: () => import('../views/articles/frontend/JS/RequireJS.vue')
   },
   {
+    id: 20181010,
+    name: 'JS-执行环境和作用域',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: '执行环境（execution context，为简单起见，有时也称为“环境” ）是 JavaScript 中最为重要的一个概念。',
+    postTime: '2018-10-10 21:55:24',
+    path: '/articles/frontend/JS/JS-08',
+    pathName: 'JS-08',
+    component: () => import('../views/articles/frontend/JS/JS-08.vue')
+  },
+  {
     id: 20181009,
     name: 'JS-基本类型和引用类型的值',
     field: 'frontend',
