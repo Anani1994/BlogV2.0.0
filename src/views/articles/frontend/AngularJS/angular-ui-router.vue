@@ -16,7 +16,7 @@
                     Icon(type="ios-book-outline")
                     | &nbsp;UI-Router for AngularJS (一)
                 p.pt-1 UI-Router is the defacto standard for routing in AngularJS
-            h3#angular-ui-router-2.ml-1
+            h3#angular-ui-router-1.ml-1
                 Icon(type="logo-buffer")
                 | &nbsp;原生路由
             Divider
@@ -92,11 +92,14 @@
                             | 
                             | // JS/route.js    
                             | function router ($stateProvider, $urlRouterProvider) {
+                            |     // $urlRouterProvider-路由重定向
+                            |     $urlRouterProvider.when('', '/index'); // 对非法路由进行重定向
                             |     $stateProvider
                             |         .state('home', {    // 路由名
                             |             url: '/index',  // 路径
                             |             template: '&lt;div&gt;Hello world&lt;/div&gt;', // 模板
                             |         })
+                            |     $urlRouterProvider.otherwise('/page-404');
                             | }
                             | export default router;
                             | 
