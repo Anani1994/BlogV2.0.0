@@ -165,6 +165,18 @@ export default [
     component: () => import('../views/articles/frontend/JS/RequireJS.vue')
   },
   {
+    id: 20181011,
+    name: 'JS-垃圾收集',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript'],
+    abstract: 'JavaScript 具有自动垃圾收集机制，执行环境会负责管理代码执行过程中使用的内存。',
+    postTime: '2018-10-11 22:06:23',
+    path: '/articles/frontend/JS/JS-09',
+    pathName: 'JS-09',
+    component: () => import('../views/articles/frontend/JS/JS-09.vue')
+  },
+  {
     id: 20181010,
     name: 'JS-执行环境和作用域',
     field: 'frontend',
