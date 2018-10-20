@@ -43,8 +43,9 @@
           <Input
             size="large"
             clearable
+            @on-focus="hideSearchResult"
             v-model="searchValue">
-            <Select v-model="searchType" slot="prepend" style="width: 100px">
+            <Select v-model="searchType" slot="prepend" style="width: 100px" @on-change="hideSearchResult">
               <Option value="git">Git 命令</Option>
               <Option value="dos">Dos 命令</Option>
               <Option value="vim">Vim 命令</Option>
@@ -52,11 +53,18 @@
             </Select>
           </Input>
           <div class="search-result-container">
-            <ul class="search-result">
-              <li v-for="item in filteredGitCommandsInfo" :key="item.id">
-                <pre class="custom-pre" @click="searchToPage(item.pathName)">{{item.command}}</pre> {{item.title}}
-              </li>
-            </ul>
+            <template v-if="!toShowThisResult">
+              <ul class="search-result">
+                <li v-for="item in filteredGitCommandsInfo" :key="item.id">
+                  <pre class="custom-pre" @click="showSearchResult(item)">{{item.command}}</pre> {{item.title}}
+                </li>
+              </ul>
+            </template>
+            <template v-else>
+              <div class="search-result">
+                <router-view name="search"></router-view>
+              </div>
+            </template>
           </div>
         </div>
       </div>
@@ -83,26 +91,33 @@ export default {
       window,
       showSearch: false,
       searchValue: '',
-      searchType: 'git'
+      searchType: 'git',
+      toShowThisResult: false
     }
   },
   methods: {
-    searchToPage(arg) {
-      this.toPage(arg);
-      this.showSearch = false;
+    showSearchResult(item) {
+      this.toShowThisResult = true;
+      this.toPage(item.pathName);
     },
+    hideSearchResult() {
+      if (this.toShowThisResult) {
+        this.toShowThisResult = false;
+      }
+    },
+    // 匹配 command 和 detail 属性
     filterData(str, arr) {
       let result = arr;
       let data = [];
       let filterArr = str.split(" ");
       result.forEach((item1) => {
-        let titleContinue = filterArr.every((item2) => {
-          return item1.title.includes(item2);
+        let detailContinue = filterArr.every((item2) => {
+          return item1.detail.includes(item2);
         });
         let commandContinue = filterArr.every((item2) => {
           return item1.command.includes(item2);
         });
-        if (titleContinue || commandContinue) {
+        if (detailContinue || commandContinue) {
           data.push(item1);
         }
       });
@@ -116,6 +131,7 @@ export default {
     allBgColor() {
       return this.$store.state.allBgColor;
     },
+    // 通过选择的搜索类型设置用于过滤的数据源
     filteredGitCommandsInfo() {
       let data = '';
       if (this.searchType === 'git') {

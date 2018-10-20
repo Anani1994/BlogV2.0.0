@@ -29,6 +29,7 @@ export const testRouter = {
   component: () => import('@/components/fullpage/fullpage.vue')
 }
 
+// 文章
 let articlesPage = [];
 articlesInfo.forEach((cur) => {
   let pathObj = {
@@ -42,52 +43,58 @@ articlesInfo.forEach((cur) => {
   articlesPage.push(pathObj);
 });
 
+// git 命令
 let gitCommandPage = [];
 gitCommandInfo.forEach((cur) => {
   let pathObj = {
     path: cur.path,
     name: cur.pathName,
     meta: {
-      title: cur.name
+      title: cur.title
     },
-    component: cur.component
+    components: {
+      search: cur.component
+    }
   };
   gitCommandPage.push(pathObj);
 });
 
+// linux 命令
 let linuxCommandPage = [];
 linuxCommandInfo.forEach((cur) => {
   let pathObj = {
     path: cur.path,
     name: cur.pathName,
     meta: {
-      title: cur.name
+      title: cur.title
     },
     component: cur.component
   };
   linuxCommandPage.push(pathObj);
 });
 
+// dos 命令
 let dosCommandPage = [];
 dosCommandInfo.forEach((cur) => {
   let pathObj = {
     path: cur.path,
     name: cur.pathName,
     meta: {
-      title: cur.name
+      title: cur.title
     },
     component: cur.component
   };
   dosCommandPage.push(pathObj);
 });
 
+// vim 命令
 let vimCommandPage = [];
 vimCommandInfo.forEach((cur) => {
   let pathObj = {
     path: cur.path,
     name: cur.pathName,
     meta: {
-      title: cur.name
+      title: cur.title
     },
     component: cur.component
   };
