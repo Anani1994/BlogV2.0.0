@@ -15,27 +15,5 @@ export default [
         pathName: 'git-add',
         path: '/articles/others/Git/command/git-add',
         component: () => import('../views/articles/others/Git/command/git-add.vue')
-    },
-    {
-        id: 2,
-        type: 'git',
-        title: 'git 撤销',
-        command: 'git reset',
-        detail: 'git 撤销',
-        arguments: ['file'],
-        pathName: 'git-reset',
-        path: '/articles/others/Git/command/git-reset',
-        component: () => import('../views/articles/others/Git/command/git-reset.vue')
-    },
-    {
-        id: 3,
-        type: 'git',
-        title: '版本记录',
-        command: 'git log',
-        detail: '撤销修改',
-        arguments: ['file'],
-        pathName: 'git-log',
-        path: '/articles/others/Git/command/git-log',
-        component: () => import('../views/articles/others/Git/command/git-log.vue')
     }
 ]
