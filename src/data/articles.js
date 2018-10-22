@@ -105,6 +105,18 @@ export default [
   },
   // ...........................................................................................................................frontend/JS
   {
+    id: 20181022,
+    name: '递归函数',
+    field: 'frontend',
+    category: 'JS',
+    tag: ['JavaScript', '递归函数'],
+    abstract: '递归函数是在一个函数通过名字调用自身。',
+    postTime: '2018-10-22 22:22:18',
+    path: '/articles/frontend/JS/factorial',
+    pathName: 'factorial',
+    component: () => import('../views/articles/frontend/JS/factorial.vue')
+  },
+  {
     id: 20181007,
     name: 'ES6-变量申明',
     field: 'frontend',
@@ -345,6 +357,18 @@ export default [
     component: () => import('../views/articles/frontend/JS/throttle-debounce.vue')
   },
   // ..........................................................................................................................frontend/AngularJS
+  {
+    id: 20181021,
+    name: 'UI-Router for AngularJS (五)',
+    field: 'frontend',
+    category: 'AngularJS',
+    tag: ['JavaScript','angular', 'router'],
+    abstract: 'UI-Router is the defacto standard for routing in AngularJS-重定向和事件。',
+    postTime: '2018-10-21 20:42:38',
+    path: '/articles/frontend/AngularJS/angular-ui-router-4',
+    pathName: 'angular-ui-router-4',
+    component: () => import('../views/articles/frontend/AngularJS/angular-ui-router-4.vue')
+  },
   {
     id: 20181015,
     name: 'UI-Router for AngularJS (四)',
