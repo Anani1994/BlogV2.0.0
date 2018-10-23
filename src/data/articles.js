@@ -358,6 +358,18 @@ export default [
   },
   // ..........................................................................................................................frontend/AngularJS
   {
+    id: 20181023,
+    name: 'Angular 模态框',
+    field: 'frontend',
+    category: 'AngularJS',
+    tag: ['JavaScript','angular', '$modal', '$modalInstance'],
+    abstract: '$modal 是一种快速创建 AngularJS 模态框的服务。',
+    postTime: '2018-10-23 21:27:28',
+    path: '/articles/frontend/AngularJS/angular-ui-modal',
+    pathName: 'angular-ui-modal',
+    component: () => import('../views/articles/frontend/AngularJS/angular-ui-modal.vue')
+  },
+  {
     id: 20181021,
     name: 'UI-Router for AngularJS (五)',
     field: 'frontend',

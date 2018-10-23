@@ -24,7 +24,7 @@
         </div>
         <div class="px-1">
             <div class="py-3 text-center">
-                <h1><Icon type="ios-book-outline" /> 经典函数</h1>
+                <h1><Icon type="ios-book-outline" /> 递归函数</h1>
                 <p class="pt-1">递归函数是在一个函数通过名字调用自身</p>
             </div>
             <h3 id="factorial-0" class="ml-1"><Icon type="logo-buffer" /> 经典递归</h3>
@@ -69,6 +69,7 @@ console.log(anotherFactorial(4)); // 报错</code></pre>
         return num * f(num-1); }
     }); </code></pre>
             <p>以上代码创建了一个名为 f()的命名函数表达式，然后将它赋值给变量 factorial。即便把函数 赋值给了另一个变量，函数的名字f 仍然有效，所以递归调用照样能正确完成。</p>
+            <p class="text-warn">需要注意的是：递归函数必须指定一个条件退出递归调用，否则会造成内存溢出。</p>
             <p class="text-right">参考资料：JavaScript 高级程序设计（第三版）</p>
             <FooterDivider></FooterDivider>
         </div>
