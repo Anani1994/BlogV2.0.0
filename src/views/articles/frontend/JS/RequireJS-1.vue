@@ -124,7 +124,7 @@
             p.text-warn 在使用 RequireJS 时，加载模块时不能写 .js 后缀。
             p 上面例子中的 callback 函数中发现有 $ 参数，这个就是依赖的 jquery 模块的输出变量，如果你依赖多个模块，可以依次写入多个参数来使用，由于sayHello 模块不存在输出变量，所以上面的回调函数只有一个参数。
                 span.text-warn 参数的放置顺序应该与前面依赖模块的书写顺序一致。
-            p.text-right 还没有看过？点击 
+            p.text-right 还没有看够？点击 
                 a(href="/#/articles/frontend/JS/RequireJS-2") RequireJS (三) 
                 | 查看更多内容。
             p.text-right 参考资料：

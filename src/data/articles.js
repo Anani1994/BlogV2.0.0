@@ -346,6 +346,18 @@ export default [
   },
   // ..........................................................................................................................frontend/AngularJS
   {
+    id: 20181013,
+    name: 'UI-Router for AngularJS (一)',
+    field: 'frontend',
+    category: 'AngularJS',
+    tag: ['JavaScript','angular', 'radio'],
+    abstract: 'UI-Router is the defacto standard for routing in AngularJS.',
+    postTime: '2018-10-13 13:27:05',
+    path: '/articles/frontend/AngularJS/angular-ui-router',
+    pathName: 'angular-ui-router',
+    component: () => import('../views/articles/frontend/AngularJS/angular-ui-router.vue')
+  },
+  {
     id: 20181010,
     name: 'AngularJS 获取 radio 选中的值',
     field: 'frontend',

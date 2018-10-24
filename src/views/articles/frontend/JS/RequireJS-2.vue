@@ -120,7 +120,7 @@
                     li
                         strong urlArgs
                         | ：加载文件时，在 url 后面添加额外的 query 参数。
-            p.text-right 还没有看过？点击 
+            p.text-right 还没有看够？点击 
                 a(href="/#/articles/frontend/JS/RequireJS-3") RequireJS (四) 
                 | 查看更多内容。
             p.text-right 参考资料：
