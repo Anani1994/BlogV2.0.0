@@ -1,0 +1,14 @@
+
+ul li p[data-v-5aaffa14] {
+  text-indent: 1rem;
+}
+ul li p[data-v-5aaffa14]:first-child {
+  margin-top: 1rem;
+}
+ul li ul[data-v-5aaffa14] {
+  margin-left: 1rem;
+}
+ul li ul li[data-v-5aaffa14]:last-child {
+  margin-bottom: 1rem;
+}
+
