@@ -346,6 +346,18 @@ export default [
   },
   // ..........................................................................................................................frontend/AngularJS
   {
+    id: 20181015,
+    name: 'UI-Router for AngularJS (四)',
+    field: 'frontend',
+    category: 'AngularJS',
+    tag: ['JavaScript','angular', 'router'],
+    abstract: 'UI-Router is the defacto standard for routing in AngularJS-嵌套路由&多视图。',
+    postTime: '2018-10-15 23:16:23',
+    path: '/articles/frontend/AngularJS/angular-ui-router-3',
+    pathName: 'angular-ui-router-3',
+    component: () => import('../views/articles/frontend/AngularJS/angular-ui-router-3.vue')
+  },
+  {
     id: 20181014,
     name: 'UI-Router for AngularJS (三)',
     field: 'frontend',

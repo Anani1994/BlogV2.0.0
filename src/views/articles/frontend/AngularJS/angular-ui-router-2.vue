@@ -96,15 +96,16 @@
                     | .state('products', {
                     |     url: "/products",
                     |     params: {
-                    |         param1: null
+                    |         param1: null,
+                    |         param2: null
                     |     },
                     |     templateUrl: 'products.html'
                     | });
-            h3#angular-ui-router-2-1.ml-1
+            h3#angular-ui-router-2-4.ml-1
                 Icon(type="logo-buffer")
                 | &nbsp;获取父级的参数
             Divider
-            p $StateParams 仅包含注册在当前状态下的参数，不包含其他状态下的参数，即使是上级的url参数也获取不到。
+            p $StateParams 仅包含注册在当前状态下的参数，不包含其他状态下的参数，即使是上级的 url 参数也获取不到。
             pre.ml-2(v-highlight)
                 code.js $stateProvider.state('products.detail', {
                     | 
@@ -120,8 +121,10 @@
                     |     }
                     | })
                     | 
-                    | // 若想让下级获取到当前状态的参数，需使用 resolve()。该函数会在画面渲染出来前先执行完成
-                    | $stateProvider.state('products.detail', {
+            p 若想让下级获取到当前状态的参数，需使用 resolve()。该函数会在画面渲染出来前先执行完成。
+            pre.ml-2(v-highlight)
+                code.js $stateProvider.state('products.detail', {
+                    |
                     |     url: '/products/:productId',
                     |     controller: function ($stateParams) {
                     |         $stateParams.productId  //*** Exists! ***//

@@ -22,6 +22,14 @@
                     content="为 $state 对象提供自定义数据"
                     status="wait"
                     @click.native="toTop('#angular-ui-router-1-5', 30)")
+                Step(title="Abstract States"
+                    content="Abstract States"
+                    status="wait"
+                    @click.native="toTop('#angular-ui-router-1-6', 30)")
+                Step(title="参数列表"
+                    content="列举参数列表"
+                    status="wait"
+                    @click.native="toTop('#angular-ui-router-1-6', 30)")
         .px-1
             .py-3.text-center
                 h1
@@ -241,6 +249,114 @@
                     |     console.log($state.current.data.name);
                     |     console.log($state.current.data.age);
                     | }
+            h3#angular-ui-router-1-6.ml-1
+                Icon(type="logo-buffer")
+                | &nbsp;Abstract States
+            Divider
+            p 抽象模板不能被激活，但是它的子模板可以被激活，从而被隐式激活。
+            ul.ml-2.mb-1 在以下情况您可能需要用到它：
+                li 为所有子状态 URLs 预置一个 URL。
+                    pre(v-highlight)
+                        code.js $stateProvider
+                            | 
+                            |     .state('products', {
+                            |         abstract: true,
+                            |         url: '/products',
+                            | 
+                            |         // Note: abstract still needs a ui-view for its children to populate.
+                            |         // You can simply add it inline here.
+                            |         template: '<ui-view/>'
+                            |     })
+                            |     .state('products.list', {
+                            |         // url will become '/products/list'
+                            |         url: '/list'
+                            |         //...more
+                            |     })
+                            |     .state('products.detail', {
+                            |         // url will become '/products/detail'
+                            |         url: '/detail',
+                            |         //...more
+                            |     });
+                li To insert a template with its own ui-view(s) that its child states will populate.
+                    pre(v-highlight)
+                        code.js $stateProvider
+                            | 
+                            |     .state('products', {
+                            |         abstract: true,
+                            |         templateUrl: 'products.html'
+                            |     })
+                            |     .state('products.list', {
+                            |         // loaded into ui-view of parent's template
+                            |         templateUrl: 'products.list.html'
+                            |     })
+                            |     .state('products.detail', {
+                            |         // loaded into ui-view of parent's template
+                            |         templateUrl: 'products.detail.html'
+                            |     });
+                    pre(v-highlight)
+                        code.html &lt;!-- products.html --&gt;
+                            | 
+                            | &lt;h1&gt;Products Page&lt;/h1&gt;
+                            | &lt;div ui-view&gt;&lt;/div&gt;
+                li 通过 resolve 为子状态提供依赖。
+                li 通过 data 提供自定义数据给子状态或事件侦听器使用。
+                li 运行一个 Onter 或 OnEnter 函数，可以以某种方式修改应用程序。
+            h3#angular-ui-router-1-7.ml-1
+                Icon(type="logo-buffer")
+                | &nbsp;参数列表
+            Divider
+            ul.ml-2
+                li 
+                    pre.custom-pre name
+                    | ：状态的名称。
+                li 
+                    pre.custom-pre template
+                    | ： string/function，html模板字符串，或者一个返回html模板字符串的函数。
+                li 
+                    pre.custom-pre templateUrl
+                    | ：string/function，模板路径的字符串，或者返回模板路径字符串的函数。
+                li 
+                    pre.custom-pre templateProvider
+                    | ：function，返回html模板字符串或模板路径的服务。
+                li 
+                    pre.custom-pre controller
+                    | ：string/function，新注册一个控制器函数或者一个已注册的控制器的名称字符串。
+                li 
+                    pre.custom-pre controllerProvider
+                    | ：function，返回控制器或者控制器名称的服务
+                li 
+                    pre.custom-pre controllerAs
+                    | ：string，控制器别名。
+                li 
+                    pre.custom-pre parent
+                    | ：string/object，手动指定该状态的父级。
+                li 
+                    pre.custom-pre resolve
+                    | ：object，将会被注入controller去执行的函数，&lt;string,function&gt;形式。
+                li 
+                    pre.custom-pre url
+                    | ：string，当前状态的对应url。
+                li 
+                    pre.custom-pre views
+                    | ：object，视图展示的配置。&lt;string,object&gt;形式。
+                li 
+                    pre.custom-pre abstract
+                    | ：boolean，一个永远不会被激活的抽象的状态，但可以给其子级提供特性的继承。默认是true。
+                li 
+                    pre.custom-pre onEnter
+                    | ：function，当进入一个状态后的回调函数。
+                li 
+                    pre.custom-pre onExit
+                    | ：function，当退出一个状态后的回调函数。
+                li 
+                    pre.custom-pre reloadOnSearch
+                    | ：boolean，如果为false，那么当一个search/query参数改变时不会触发相同的状态，用于当你修改$location.search()的时候不想重新加载页面。默认为true。
+                li 
+                    pre.custom-pre data
+                    | ：object，任意对象数据，用于自定义配置。继承父级状态的data属性。换句话说，通过原型继承可以达到添加一个data数据从而整个树结构都能获取到。
+                li 
+                    pre.custom-pre params
+                    | ：url里的参数值，通过它可以实现页面间的参数传递。
             p.text-right 还没有看够？请点击
                 a(href="/#/articles/frontend/AngularJS/angular-ui-router-2")  UI-Router for AngularJS (三) 
                 | 查看更多内容。
