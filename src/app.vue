@@ -55,8 +55,8 @@
           <div class="search-result-container">
             <template v-if="!toShowThisResult">
               <ul class="search-result">
-                <li v-for="item in filteredGitCommandsInfo" :key="item.id">
-                  <pre class="custom-pre" @click="showSearchResult(item)">{{item.command}}</pre> {{item.title}}
+                <li class="result-list" v-for="item in filteredGitCommandsInfo" :key="item.id">
+                  <pre class="custom-pre" @click="showSearchResult(item)">{{item.command}}</pre> {{item.detail}}
                 </li>
               </ul>
             </template>
@@ -171,6 +171,7 @@ export default {
       }
       if (27 === event.keyCode) {
         if (this.showSearch) {
+          this.$Modal.remove();
           this.showSearch = !this.showSearch;
         }
       }
@@ -210,7 +211,7 @@ html,body {
     border-right: 1px solid #fff;
   }
   .search-container {
-    z-index: 9999;
+    z-index: 999;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -218,7 +219,7 @@ html,body {
     background-color: rgba(0,0,0,.5);
   }
   .search-content {
-    width: 50%;
+    width: 60%;
     height: 100%;
     margin: 90px auto 0;
     .search-result-container {
@@ -231,7 +232,7 @@ html,body {
         overflow-y: scroll;
         width: calc(100% + 17px);
         height: 100%;
-        li {
+        li.result-list {
           overflow-x: auto;
           margin-bottom: 5px;
           list-style-type: none;
