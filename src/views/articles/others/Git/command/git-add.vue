@@ -31,7 +31,8 @@
                         img.d-block.mb-1(src="../../../../../assets/images/acticles/others/git/step-0-1.png", alt="状态")
                     li 另外我们经常使用到的有 
                         pre.custom-pre git add .
-                        |  添加所有文件(同样不包含被忽略的文件)。
+                        |  添加所有文件(同样不包含被忽略的文件)，
+                        span.text-warn 并且不包括被删除的文件。
                         p 基于上面第二步执行后的状态为：
                         img.d-block.mb-1(src="../../../../../assets/images/acticles/others/git/step-0-2.png", alt="状态")
                     li 为了说明默认情况下不会添加被忽略的文件，因此我们来创建一个
@@ -100,7 +101,8 @@ export default {
                     render: (h, parmas) => {
                         return h('i-button', {
                             props: {
-                                type: 'info'
+                                type: 'info',
+                                disabled: parmas.row.prohibitClick
                             },
                             nativeOn: {
                                 click: () => {
@@ -117,6 +119,7 @@ export default {
                     shortName: '无',
                     useStyle: 'git add <pathspec>',
                     des: '添加所有匹配的文件到暂存区',
+                    prohibitClick: false,
                     detailDes: [
                         {
                             src: 'assets/images/acticles/others/git/step-1-1',
@@ -129,6 +132,7 @@ export default {
                     shortName: '-n',
                     useStyle: 'git add -n <...ortherArgArr>',
                     des: '显示命令将会产生的效果，不会实际的添加文件。',
+                    prohibitClick: false,
                     detailDes: [
                         {
                             src: 'assets/images/acticles/others/git/arg-n',
@@ -141,6 +145,7 @@ export default {
                     shortName: '-v',
                     useStyle: 'git add -v <...ortherArgArr>',
                     des: '显示此命令产生的效果，会实际的添加文件。',
+                    prohibitClick: false,
                     detailDes: [
                         {
                             src: 'assets/images/acticles/others/git/arg-v',
@@ -153,6 +158,7 @@ export default {
                     shortName: '-f',
                     useStyle: 'git add -f <...ortherArgArr>',
                     des: '允许添加被忽略的文件。',
+                    prohibitClick: false,
                     detailDes: [
                         {
                             src: 'assets/images/acticles/others/git/arg-f',
@@ -165,6 +171,7 @@ export default {
                     shortName: '-i',
                     useStyle: 'git add -i <...ortherArgArr>',
                     des: '将工作树中的修改内容以交互方式添加到索引中。',
+                    prohibitClick: false,
                     detailDes: [
                         {
                             src: 'assets/images/acticles/others/git/arg-i',
@@ -172,6 +179,147 @@ export default {
                         }
                     ]
                 },
+                {
+                    arg: '--patch',
+                    shortName: '-p',
+                    useStyle: 'git add -p <...ortherArgArr>',
+                    des: '将工作树中的修改内容以交互方式添加到索引中，并且有机会在将修改后的内容添加到索引之前查看差异。',
+                    prohibitClick: false,
+                    detailDes: [
+                        {
+                            src: 'assets/images/acticles/others/git/arg-p-0',
+                            text: '<p>使用该参数时，在没有差异的情况下，不会进入交互模式（未跟踪的文件会被忽略），所以我们先把一些文件添加到暂存区，然后进行一点修改：</p>'
+                        },
+                        {
+                            src: 'assets/images/acticles/others/git/arg-p-1',
+                            text: '<p>操作后的状态：</p>'
+                        }
+                    ]
+                },
+                {
+                    arg: '--edit',
+                    shortName: '-e',
+                    useStyle: 'git add -e <...ortherArgArr>',
+                    des: '在编辑器中打开 diff 与索引，让用户编辑它。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '--update',
+                    shortName: '-u',
+                    useStyle: 'git add -u <...ortherArgArr>',
+                    des: '更新与 pathspec 参数的匹配项，可以删除索引条目，也可以修改索引条目以匹配工作树，但不添加新文件。如果当使用 -u 选项时没有给出 pathspec，则更新整个工作树中的所有跟踪文件（旧版本Git用于将更新限制到当前目录及其子目录）。',
+                    prohibitClick: false,
+                    detailDes: [
+                        {
+                            src: 'assets/images/acticles/others/git/arg-u',
+                            text: ''
+                        }
+                    ]
+                },
+                {
+                    arg: '--no-ignore-removal',
+                    shortName: '-A/--all',
+                    useStyle: 'git add -A <...ortherArgArr>',
+                    des: '提交所有变化。',
+                    prohibitClick: false,
+                    detailDes: [
+                        {
+                            src: '',
+                            text: '就像是共同执行 git add . 和 git add -u 的结果。如果当使用 -a 选项时没有给出 pathspec，则更新整个工作树中的所有跟踪文件（旧版本Git用于将更新限制到当前目录及其子目录）。'
+                        }
+                    ]
+                },
+                {
+                    arg: '--ignore-removal',
+                    shortName: '--no-all',
+                    useStyle: 'git add --no-all <...ortherArgArr>',
+                    des: '该参数主要是在旧版本中用来忽略删除的文件，也就是说 git add <pathspec> 与 git add <pathspec> --no-all 的效果一样。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '--intent-to-add',
+                    shortName: '-N',
+                    useStyle: 'git add -N <...ortherArgArr>',
+                    des: '只记录稍后将添加路径的事实。路径的条目被放置在没有内容的索引中。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '--refresh',
+                    shortName: '无',
+                    useStyle: 'git add --refresh <...ortherArgArr>',
+                    des: '不要添加文件，而只刷新索引中的状态信息。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '--ignore-errors',
+                    shortName: '无',
+                    useStyle: 'git add --ignore-errors <...ortherArgArr>',
+                    des: '如果某些文件由于索引错误而无法添加，则不要中止操作，而是继续添加其他文件。命令仍然以非零状态退出。配置变量 add.ignoreErrors 设置为 true 可以使其成为默认行为。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '--ignore-missing',
+                    shortName: '无',
+                    useStyle: 'git add --dry-run --ignore-missing <...ortherArgArr>',
+                    des: '该参数只能与参数“--dry-run”一起使用。通过使用这个选项，用户可以检查是否忽略任何给定的文件，无论它们是否已经存在于工作树中。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '--chmod=(+|-)x',
+                    shortName: '无',
+                    useStyle: '尚且不明',
+                    des: '重写添加文件的可执行位。可执行位只在索引中更改，磁盘上的文件保持不变。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '--',
+                    shortName: '无',
+                    useStyle: 'git add -- <fileName>',
+                    des: '将命令行选项与文件列表分离（当文件名可能被误认为是命令行选项时很有用）。',
+                    prohibitClick: false,
+                    detailDes: [
+                        {
+                            src: 'assets/images/acticles/others/git/arg---',
+                            text: ''
+                        }
+                    ]
+                },
+                {
+                    arg: '--no-warn-embedded-repo',
+                    shortName: '无',
+                    useStyle: 'git add --no-warn-embedded-repo <fileName>',
+                    des: '默认情况下, git add 向嵌入式存储库添加索引时会发出警告, 而不用 git submodule add 其中创建条目 .gitmodules。该选项将会禁止警告。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '--renormalize',
+                    shortName: '无',
+                    useStyle: 'git add --renormalize <fileName>',
+                    des: '将“干净”的过程应用到所有被跟踪的文件，以强制再次添加到索引中。',
+                    prohibitClick: true,
+                    detailDes: []
+                },
+                {
+                    arg: '-h',
+                    shortName: '无',
+                    useStyle: 'git add -h <fileName>',
+                    des: '帮助信息：显示对 git add 的参数的描述。',
+                    prohibitClick: false,
+                    detailDes: [
+                        {
+                            src: 'assets/images/acticles/others/git/arg-h',
+                            text: ''
+                        }
+                    ]
+                }
             ]
         }
     },
@@ -181,10 +329,16 @@ export default {
             if (parmas.row.detailDes.length) {
                 content = '';
                 parmas.row.detailDes.forEach(item => {
-                    let img = require('../../../../../' + item.src + '.png');
-                    if (item !== '') {
-                        content = content + `<p>${item.text}</p><img src="${img}"/>`;
-                    } else {
+                    
+                    if (item.text !== '' & item.src !== '') {
+                        let img = require('../../../../../' + item.src + '.png');
+                        content = content + `<div>${item.text}</div><img src="${img}"/>`;
+                    }
+                    if (item.text !== '' & item.src === '') {
+                        content = content + `<div>${item.text}</div>`;
+                    }
+                    if (item.src !== '' & item.text === '') {
+                        let img = require('../../../../../' + item.src + '.png');
                         content = content + `<img src="${img}"/>`;
                     }
                 });
