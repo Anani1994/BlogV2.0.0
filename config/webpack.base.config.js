@@ -94,7 +94,7 @@ module.exports = {
             loader: 'url-loader',
             options: { // 配置参数
               limit: 1024, // 比较标准，小于标准的图片转换为 base64 代码
-              name:'blog/images/img-[name].[ext]'
+              name:'./images/img-[name].[ext]'
             }
           }
         ]
@@ -117,7 +117,7 @@ module.exports = {
     //   chunkFilename: "[id].[hash].css"
     // }),
     // 打包之前使用这个插件尝试清除dist目录下的文件
-    new cleanWebpackPlugin(['blog/css/*','blog/js/*','blog/images/*','index.html'], {
+    new cleanWebpackPlugin(['./css/*','./js/*','./images/*','./index.html'], {
       root: path.resolve(__dirname, '../')
     }),
     // 配置 jQuery

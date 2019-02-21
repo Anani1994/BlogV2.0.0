@@ -18,13 +18,17 @@
           <Icon type="ios-folder-outline" />
           项目演示
         </template>
-        <MenuItem name="vue-market" @click.native="window.location.href='http://anani.coding.me/blog/blog/projects/vue-market/index.html#/login'">
+        <MenuItem name="vue-market" @click.native="window.location.href='https://anani1994.github.io/anani1994.github.io/projects/vue-market/index.html'">
           <Icon type="md-appstore" />
           购物商城
         </MenuItem>
-        <MenuItem name="vue-market" @click.native="window.location.href='https://anani1994.github.io/anani1994.github.io/blog/projects/old-blog/index.html'">
+        <MenuItem name="vue-market" @click.native="window.location.href='https://anani1994.github.io/anani1994.github.io/projects/BlogV1.0.0/index.html'">
           <Icon type="md-alert" />
           前往旧博客
+        </MenuItem>
+        <MenuItem name="vue-market" @click.native="window.location.href='https://anani1994.github.io/#/'">
+          <Icon type="ios-happy" />
+          前往新博客
         </MenuItem>
       </Submenu>
       <MenuItem class="float-right" name="articles" @click.native="toPage('field')">
