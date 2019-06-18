@@ -13,7 +13,7 @@
         <Icon type="ios-planet-outline" />
         博客园
       </MenuItem>
-      <Submenu class="float-right" name="projects">
+      <!-- <Submenu class="float-right" name="projects">
         <template slot="title">
           <Icon type="ios-folder-outline" />
           项目演示
@@ -30,7 +30,7 @@
           <Icon type="ios-happy" />
           前往新博客
         </MenuItem>
-      </Submenu>
+      </Submenu> -->
       <MenuItem class="float-right" name="articles" @click.native="toPage('field')">
         <Icon type="ios-book-outline"></Icon>
         博文
